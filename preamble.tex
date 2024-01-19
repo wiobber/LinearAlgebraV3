@@ -28,11 +28,8 @@
 \newcommand\norm[1]{\left\lVert#1\right\rVert}
 
 
-\ifHcode %%% I think this is correct, though maybe it should be \ifHcode
+
 \renewcommand{\desmosThreeD}[3]{\HCode{<iframe src="https://www.desmos.com/3d/#1" width="100\%" height="#3px" style="border: 1px solid #ccc" frameborder=0>This browser does not support embedded elements.</iframe>}}
-\else
-\newcommand{\desmosThreeD}[3]{Desmos link: \url{https://www.desmos.com/3d/#1}}
-\fi
 
 
 

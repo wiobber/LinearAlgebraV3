@@ -1,0 +1,360 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+
+\title{Essential Vocabulary} \license{CC BY-NC-SA 4.0}
+
+
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+
+\begin{onlineOnly}
+\section*{Essential Vocabulary}
+\end{onlineOnly}
+
+\subsection{$\RR^n$}
+
+Pythagoras’ Theorem
+\begin{expandable}
+    Where have we used it in the context of points? 
+ vectors?
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Distance between points 
+\begin{expandable}
+%\begin{formula}
+Let $A(a_1, a_2,\ldots ,a_n)$ and $B(b_1, b_2,\ldots ,b_n)$ be points in $\RR^n$.  The distance between $A$ and $B$ is given by
+$$AB=\sqrt{(a_1-b_1)^2+(a_2-b_2)^2+\ldots +(a_n-b_n)^2}$$
+%\end{formula}
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\subsection{Vector Basics}
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0010/main}{Vector}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Length (norm/magnitude) of a vector
+\begin{expandable}
+  %  \begin{definition}
+Let $\vec{v}=\begin{bmatrix}v_1\\ v_2\\ \vdots \\v_n\end{bmatrix}$ be a vector in $\RR^n$, then the \dfn{length}, or the \dfn{magnitude}, of $\vec{v}$ is given by
+$$  \norm{\vec{v}}=\sqrt{v_1^2+v_2^2+\ldots +v_n^2}$$
+%\end{definition}
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Zero vector
+\begin{expandable}
+    A vector of zero length.  The zero vector has no direction.
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Scalar multiplication 
+\begin{expandable}
+    Let $\vec{u}=\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}$ be a vector in $\RR^n$, and let $k$ be a scalar, then
+  $$k\vec{u}=k\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}=\begin{bmatrix}
+ku_1\\
+ku_2\\
+\vdots\\
+ku_n
+\end{bmatrix}$$
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Parallel vectors
+\begin{expandable}
+    Two vectors are parallel if they are non-zero scalar multiples of each other.
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Unit vector
+\begin{expandable}
+    A vector of length 1.
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0036/main}{Unit vector in the direction of a given vector}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Standard unit vectors
+\begin{expandable}
+    %\begin{definition}
+  Let $\vec{e}_i$ denote a vector that has $1$ as the $i^{th}$ component and zeros elsewhere.  In other words, $$\vec{e}_i=\begin{bmatrix}
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{bmatrix}$$ 
+  where $1$ is in the $i^{th}$ position.  We say that  $\vec{e}_i$ is a \dfn{standard unit vector of $\RR^n$}.
+%\end{definition}
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0030/main}{Head-to-tail vector addition rule}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0030/main}{Parallelogram rule for vector addition}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Vector addition
+\begin{expandable}
+  Let $\vec{u}=\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}$ and $\vec{v}=\begin{bmatrix}
+v_1\\
+v_2\\
+\vdots\\
+v_n
+\end{bmatrix}$ be vectors in $\RR^n$.  We define $\vec{u}+\vec{v}$ by
+  $$\vec{u}+\vec{v}=\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}+\begin{bmatrix}
+v_1\\
+v_2\\
+\vdots\\
+v_n
+\end{bmatrix}=\begin{bmatrix}
+u_1+v_1\\
+u_2+v_2\\
+\vdots\\
+u_n+v_n
+\end{bmatrix}$$
+  \end{expandable}
+
+  \begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\subsection{Algebraic Properties of Vectors}
+    The following properties hold for vectors $\vec{u}$, $\vec{v}$ and ${\bf w}$ in $\RR^n$ and scalars $k$ and $p$ in $\RR$.
+  \begin{enumerate}
+  \item 
+  Commutative Property of Addition
+\begin{expandable}  
+  $$\vec{u}+\vec{v}=\vec{v}+\vec{u}$$
+\end{expandable}  
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+  \item 
+  Associative Property of Addition
+  \begin{expandable}
+  $$(\vec{u}+\vec{v})+{\bf w}=\vec{u}+(\vec{v}+{\bf w})$$
+   \end{expandable}
+
+   \begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+  \item 
+  Existence of Additive Identity: 
+  \begin{expandable}There exists a vector $\vec{0}$ such that
+  $$\vec{u}+\vec{0}=\vec{u}$$
+  \end{expandable}
+
+  \begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+  \item 
+  Existence of Additive Inverse: 
+  \begin{expandable}For every vector $\vec{u}$, there exists a vector $-\vec{u}$ such that
+  $$\vec{u}+(-\vec{u})=\vec{0}$$
+  \end{expandable}
+
+  \begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+  \item
+  Distributive Property over Vector Addition
+  \begin{expandable}
+  $$k(\vec{u}+\vec{v})=k\vec{u}+k\vec{v}$$
+  \end{expandable}
+
+  \begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+  \item
+  Distributive Property over Scalar Addition
+  \begin{expandable}
+  $$(k+p)\vec{u}=k\vec{u}+p\vec{u}$$
+  \end{expandable}
+
+  \begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+  \item 
+  Associative Property for Scalar Multiplication
+  \begin{expandable}
+  $$k(p\vec{u})=(kp)\vec{u}$$
+  \end{expandable}
+
+  \begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+  \item 
+  Multiplication by 1
+  \begin{expandable}
+  $$1\vec{u}=\vec{u}$$
+  \end{expandable}
+  \end{enumerate}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\subsection{Dot Product}
+Dot product 
+\begin{expandable}
+ %   \begin{definition}
+  Let $\vec{u}$ and $\vec{v}$ be vectors in $\RR^n$.  The \dfn{dot
+    product} of $\vec{u}$ and $\vec{v}$, denoted by
+  $\vec{u}\dotp \vec{v}$, is given by
+$$\vec{u}\dotp\vec{v}=\begin{bmatrix}u_1\\u_2\\\vdots\\u_n\end{bmatrix}\dotp\begin{bmatrix}v_1\\v_2\\\vdots\\v_n\end{bmatrix}=u_1v_1+u_2v_2+\ldots+u_nv_n$$
+%\end{definition}
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Dot product properties
+\begin{expandable}
+    The following properties hold for
+  vectors $\vec{u}$, $\vec{v}$ and $\vec{w}$ in $\RR^n$ and scalar
+  $k$ in $\RR$.
+  \begin{enumerate}
+  \item
+    $\vec{u}\dotp\vec{v}=\vec{v}\dotp\vec{u}$
+  \item $(\vec{u}+\vec{v})\dotp \vec{w}=\vec{u}\dotp \vec{w}+\vec{v}\dotp \vec{w}$
+  \item $\vec{u}\dotp (\vec{v}+\vec{w})=\vec{u}\dotp\vec{v}+\vec{u}\dotp \vec{w}$
+  \item $(k\vec{u})\dotp \vec{v}=k(\vec{u}\dotp\vec{v})=\vec{u}\dotp (k\vec{v})$
+  \item  $\vec{u}\dotp\vec{u}\geq 0$, and $\vec{u}\dotp\vec{u}=0$ if and only if $\vec{u}={\bf 0}$.
+  \item 
+    $\norm{\vec{u}}^2=\vec{u}\dotp\vec{u}$
+  \end{enumerate}
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Angle between vectors
+\begin{expandable}
+     Let $\vec{u}$ and $\vec{v}$ be vectors in $\RR^n$, and let $\theta$ be the included angle.  Then
+  $$\vec{u}\dotp\vec{v}=\norm{\vec{u}}\norm{\vec{v}}\cos \theta$$
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Orthogonal vectors
+\begin{expandable}
+ %   \begin{definition}
+Let $\vec{u}$ and $\vec{v}$ be vectors in $\RR^n$. We say $\vec{u}$ and $\vec{v}$ are \dfn{orthogonal} if $\vec{u}\dotp \vec{v}=0$.
+%\end{definition}
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\subsection{Lines and Planes in $\RR^n$}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/RRN-0020/main}{Direction vector}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Parametric equation of a line 
+\begin{expandable}
+    Let $\vec{v}=\begin{bmatrix}v_1\\v_2\\\vdots\\v_n\end{bmatrix}$ be a direction vector for line $l$ in $\RR^n$, and let $(a_1, a_2,\ldots , a_n)$ be an arbitrary point on $l$.  Then the following parametric equations describe $l$:
+\[
+x_1=v_1t+a_1\]
+\[x_2=v_2t+a_2\]
+\[\vdots\]
+\[x_n=v_nt+a_n
+\]
+\end{expandable}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/RRN-0030/main}{Normal vector}
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+Equation of a plane
+\begin{expandable}
+The plane through $P_{0}(x_{0}, y_{0}, z_{0})$ with a normal vector $$\vec{n} = 
+\begin{bmatrix}
+a\\
+b\\
+c
+\end{bmatrix}\neq\vec{0}$$
+ is given by
+$$a(x - x_{0}) + b(y - y_{0}) + c(z - z_{0}) = 0$$
+\end{expandable}
+
+\end{document}

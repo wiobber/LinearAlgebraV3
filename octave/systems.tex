@@ -10,8 +10,7 @@
 The templates in this section provide sample code for solving systems of equations.  To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  We also provide a link to our code at the bottom of each template.
 
 \begin{template}\label{temp:systems1}
-Consider the system%
-\footnote{You may remember this system from \href{https://ximera.osu.edu/linearalgebrav3/LinearAlgebraInteractiveIntro/SYS-0020/main}{Augmented Matrix Notation and Elementary Row Operations}.  } 
+Consider the system
 \begin{equation}
 \begin{array}{ccccccccc}
       x &- &y&&&&&= &0 \\
@@ -21,7 +20,7 @@ Consider the system%
     \end{array}
     \end{equation}
 
- You may remember this system from \href{https://ximera.osu.edu/linearalgebrav3/LinearAlgebraInteractiveIntro/SYS-0020/main}{Augmented Matrix Notation and Elementary Row Operations}.   
+ (You may remember this system from \href{https://ximera.osu.edu/linearalgebrav3/LinearAlgebraInteractiveIntro/SYS-0020/main}{Augmented Matrix Notation and Elementary Row Operations}.)  We will solve this system with Octave.   
 \begin{verbatim}
 % Define the coefficient matrix A
 A = [1 -1 0 0;
@@ -40,6 +39,37 @@ x = A \ b
 
 \end{template}
 
-The system in Template \ref{temp:systems1} has a unique solution.  Try manipulating the system so that it has infinitely many solutions or no solutions.  Run the code to see what happens.
+The system in Template \ref{temp:systems1} has a unique solution.  Try manipulating the system so that it has infinitely many solutions or no solutions.  Run the code to see what happens.  You will observe the following:
+
+\begin{itemize}
+    \item If a system has infinitely many solutions, Octave will find one particular solution.
+    \item If a system has no solutions, Octave will find an approximate solution using least-squares.  We will cover this method in \href{https://ximera.osu.edu/linearalgebrav3/LinearAlgebraInteractiveIntro/RTH-0030/main}{Least-Squares Approximation}.
+\end{itemize}
+
+When solving systems by hand, you utilized Gauss-Jordan elimination to reduce the augmented matrix to its reduced row echelon form.  Having the reduced row echelon form available made it easy to write out the solution(s) or determine that the system is inconsistent.  We can find rref and the rank of a matrix in Octave as follows.
+
+\begin{template}\label{temp:rref}
+    \begin{verbatim}
+% Define the augmented matrix 
+% corresponding to the coefficient matrix A and vector b
+A_b = [1 -1 0 0 0;
+     2 -2 1 2 4;
+     0 1 0 1 0;
+     0 0 2 1 5];
+     
+% Find rref of A_b
+rref(A_b)
+
+% Find the rank of A_b
+rank(A_b)
+    \end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJxFjsEKwjAMhu-FvsN_Gehh0A49iYfB8CVEpOvSWWSt1Co-vumkmBCS_-cjSYOBnA-EfCOY17xQyDRhMTn5D2xMiZ6PGCYfZuS4UjaSc956JivXw4QJb7I5JoxS9NcRR5w1Wg1V8iAFSnRoO2huu-oo6F_9DYXC7C_VkaLByfMBfsYhOvB6KYrY8LSVgoUJ91V8ASwdNw8=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.    
+\end{template}
+
+
+
+
+% add rref
   
 \end{document}

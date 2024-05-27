@@ -1,0 +1,45 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+
+\title{Vector Operations} \license{CC BY-NC-SA 4.0}
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+The templates in this section provide sample code for solving systems of equations.  To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  We also provide a link to our code at the bottom of each template.
+
+\begin{template}\label{temp:systems1}
+Consider the system%
+\footnote{You may remember this system from \href{https://ximera.osu.edu/linearalgebrav3/LinearAlgebraInteractiveIntro/SYS-0020/main}{Augmented Matrix Notation and Elementary Row Operations}.  } 
+\begin{equation}
+\begin{array}{ccccccccc}
+      x &- &y&&&&&= &0 \\
+	 2x& -&2y&+&z&+&2w&=&4\\
+     & &y&&&+&w&=&0\\
+     & &&&2z&+&w&=&5
+    \end{array}
+    \end{equation}
+
+ You may remember this system from \href{https://ximera.osu.edu/linearalgebrav3/LinearAlgebraInteractiveIntro/SYS-0020/main}{Augmented Matrix Notation and Elementary Row Operations}.   
+\begin{verbatim}
+% Define the coefficient matrix A
+A = [1 -1 0 0;
+     2 -2 1 2;
+     0 1 0 1;
+     0 0 2 1];
+
+% Define vector b
+b = [0;4;0;5];
+
+% Solve the system 
+x = A \ b
+\end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJxFjsEKwjAQRO-B_Ye59FjYBD0FDwH_wGP1YMIGA7aBNpT69yZIcG-PeczsgKvEtAjKSxCyxJhCkqVgfpY1HXCkHC6YNEYNBltSaGcwGmiYzowW6z9yVfSjMqmhb-wSSl7hSfnWyfZk2Z67dMvv_ffH9tmKzCB1VM3hDv8FLh8nkA==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+
+\end{template}
+
+The system in Template \ref{temp:systems1} has a unique solution.  Try manipulating the system so that it has infinitely many solutions or no solutions.  Run the code to see what happens.
+  
+\end{document}

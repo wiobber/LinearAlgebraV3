@@ -9,7 +9,7 @@
 
 The templates in this section provide sample code for basic matrix operations.  To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  We also provide a link to our code at the bottom of each template.
 
-\begin{template}\label{temp:systems1}
+\begin{template}\label{temp:matrixOps}
 
 \begin{verbatim}
 % Define matrices A, B, and C
@@ -30,6 +30,8 @@ C = [1 -2 1 4;
 sum=A+B
 
 % Find the transpose of A
+% Copying and pasting A'  may not work because the prime comes through
+% in a different font.
 A_trans1=A'
 % we can also use the transpose function
 A_trans2=transpose(A)
@@ -46,5 +48,44 @@ det_C=det(C)
 
 \href{https://sagecell.sagemath.org/?z=eJxdUEFuwyAQvFvyH-YSNWkTyZDcIg6Yqp-oogjZWEGqIcK4_X4XartOOKyY2ZmdhQ3eTWedQa9jsI0ZIPeo99CuhSoLCYFPhgNDhepcFkiH48DBwGdcIbXZZcZlUScbxzEZTzOdxyTviuBkPF7O2TR51RSZIk4PkZQx49xl_yuxlEUilmetpm3wYekp8q0ui2HsRb4sdLwZxKDdcPeDge8g6cnXzDAhX5Lux6DRDvpr8BhJ9GjpRtdE691i42JpbuVuFSXpN-_Bt2MThXxVT0tY923C3wrUInRVgupW7Z6ErYkm9NZpFycxMSSmSuJfcXxtIA==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 \end{template}
+
+\begin{template}\label{temp:id_matrix}
+Sometimes it is useful to generate an identity matrix.  To generate a $5\times 5$ identity matrix, use the code below.
+\begin{verbatim}
+% n by n identity matrix
+I_5=eye(5)
+\end{verbatim}
+\end{template}
+
+\begin{template}\label{temp:matrixRowColEntry}
+    We can access individual rows, columns, and entries of a matrix.
+\begin{verbatim}
+% Define a matrix 
+A=[2 -1 3 -1; 1 0 2 1; 1 -1 1 -2]
+
+% Third row of A
+row_3=A(3,:)
+
+% Second column of A
+col_2=A(:,2)
+
+% Second row third entry of A
+a_23=A(2,3)   
+\end{verbatim}
+\href{https://sagecell.sagemath.org/?z=eJxVjEEKwjAURPeB3GE2BQsR7M-u0kXAG9SdSAhtigGbQIhYb-9v7cbNMDM8XoWLn0L0cJhdyWGBFKa7EY4NNMcZDU4gbIU_DrpLIUWF6yPkETm9kSYYKbhZ3ZmDVm39I3o_pDhiSM_XHHeKhyWmWkX_1Coqm9LHkj877iytTlK6_gIqSCuZ&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+\end{template}
+
+\begin{example}\label{ex:gauss_octave}
+Use Octave code to show one step of Gaussian elimination by subtracting half of the first row from the second row of the given matrix $A$.
+\begin{verbatim}
+% Define matrix A
+A=[2 -1 3 -1; 1 0 2 1; 1 -1 1 -2] 
+
+% Replace the second row of A with second row minus half the first row.  
+A(2,:)=-1/2*A(1,:)+A(2,:)  
+\end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJxNjMsKwjAURPeB_MNsCvVRNXGndHHBL3ArLkK9IYE2kSRSP99YN26Gw5lhGlzY-sCYTEn-DZKC-ptGp3CscYbCARoLVFdD3yGFFA2u_BzNwCiOkXmI4YEUZ0QLwuyL-5eTD68MZ0a7zK1PuXyLHeoZtXp7WvWd2us1tary5qc-770qUw==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+\end{example}
 
 \end{document}

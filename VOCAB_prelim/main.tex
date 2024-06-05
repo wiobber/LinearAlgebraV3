@@ -12,178 +12,16 @@
 
 
 \begin{onlineOnly}
-\section*{Essential Vocabulary}
+\section*{Vocabulary and Review Problems}
 \end{onlineOnly}
 
-\subsection{$\RR^n$}
-
-Pythagoras’ Theorem
-\begin{expandable}
-    Where have we used it in the context of points? 
- vectors?
-\end{expandable}
-
 \begin{tikzpicture}[scale=1]
    \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
  \end{tikzpicture}
 
-Distance between points 
-\begin{expandable}
-%\begin{formula}
-Let $A(a_1, a_2,\ldots ,a_n)$ and $B(b_1, b_2,\ldots ,b_n)$ be points in $\RR^n$.  The distance between $A$ and $B$ is given by
-$$AB=\sqrt{(a_1-b_1)^2+(a_2-b_2)^2+\ldots +(a_n-b_n)^2}$$
-%\end{formula}
-\end{expandable}
+algebraic properties of vectors
 
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-\subsection{Vector Basics}
-\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0010/main}{Vector}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-Length (norm/magnitude) of a vector
-\begin{expandable}
-  %  \begin{definition}
-Let $\vec{v}=\begin{bmatrix}v_1\\ v_2\\ \vdots \\v_n\end{bmatrix}$ be a vector in $\RR^n$, then the \dfn{length}, or the \dfn{magnitude}, of $\vec{v}$ is given by
-$$  \norm{\vec{v}}=\sqrt{v_1^2+v_2^2+\ldots +v_n^2}$$
-%\end{definition}
-\end{expandable}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-Zero vector
-\begin{expandable}
-    A vector of zero length.  The zero vector has no direction.
-\end{expandable}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-Scalar multiplication 
-\begin{expandable}
-    Let $\vec{u}=\begin{bmatrix}
-u_1\\
-u_2\\
-\vdots\\
-u_n
-\end{bmatrix}$ be a vector in $\RR^n$, and let $k$ be a scalar, then
-  $$k\vec{u}=k\begin{bmatrix}
-u_1\\
-u_2\\
-\vdots\\
-u_n
-\end{bmatrix}=\begin{bmatrix}
-ku_1\\
-ku_2\\
-\vdots\\
-ku_n
-\end{bmatrix}$$
-\end{expandable}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-Parallel vectors
-\begin{expandable}
-    Two vectors are parallel if they are non-zero scalar multiples of each other.
-\end{expandable}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-Unit vector
-\begin{expandable}
-    A vector of length 1.
-\end{expandable}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0036/main}{Unit vector in the direction of a given vector}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-Standard unit vectors
-\begin{expandable}
-    %\begin{definition}
-  Let $\vec{e}_i$ denote a vector that has $1$ as the $i^{th}$ component and zeros elsewhere.  In other words, $$\vec{e}_i=\begin{bmatrix}
-0\\
-0\\
-\vdots\\
-1\\
-\vdots\\
-0
-\end{bmatrix}$$ 
-  where $1$ is in the $i^{th}$ position.  We say that  $\vec{e}_i$ is a \dfn{standard unit vector of $\RR^n$}.
-%\end{definition}
-\end{expandable}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0030/main}{Head-to-tail vector addition rule}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0030/main}{Parallelogram rule for vector addition}
-
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-Vector addition
-\begin{expandable}
-  Let $\vec{u}=\begin{bmatrix}
-u_1\\
-u_2\\
-\vdots\\
-u_n
-\end{bmatrix}$ and $\vec{v}=\begin{bmatrix}
-v_1\\
-v_2\\
-\vdots\\
-v_n
-\end{bmatrix}$ be vectors in $\RR^n$.  We define $\vec{u}+\vec{v}$ by
-  $$\vec{u}+\vec{v}=\begin{bmatrix}
-u_1\\
-u_2\\
-\vdots\\
-u_n
-\end{bmatrix}+\begin{bmatrix}
-v_1\\
-v_2\\
-\vdots\\
-v_n
-\end{bmatrix}=\begin{bmatrix}
-u_1+v_1\\
-u_2+v_2\\
-\vdots\\
-u_n+v_n
-\end{bmatrix}$$
-  \end{expandable}
-
-  \begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
-
-\subsection{Algebraic Properties of Vectors}
-    The following properties hold for vectors $\vec{u}$, $\vec{v}$ and ${\bf w}$ in $\RR^n$ and scalars $k$ and $p$ in $\RR$.
+The following properties hold for vectors $\vec{u}$, $\vec{v}$ and ${\bf w}$ in $\RR^n$ and scalars $k$ and $p$ in $\RR$.
   \begin{enumerate}
   \item 
   Commutative Property of Addition
@@ -255,12 +93,19 @@ u_n+v_n
   \end{expandable}
   \end{enumerate}
 
-\begin{tikzpicture}[scale=1]
-   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
- \end{tikzpicture}
+angle between vectors
 
-\subsection{Dot Product}
-Dot product 
+Cauchy-Schwarz Inequality
+cross product
+direction vector
+distance between points 
+\begin{expandable}
+%\begin{formula}
+Let $A(a_1, a_2,\ldots ,a_n)$ and $B(b_1, b_2,\ldots ,b_n)$ be points in $\RR^n$.  The distance between $A$ and $B$ is given by
+$$AB=\sqrt{(a_1-b_1)^2+(a_2-b_2)^2+\ldots +(a_n-b_n)^2}$$
+%\end{formula}
+\end{expandable}
+dot product
 \begin{expandable}
  %   \begin{definition}
   Let $\vec{u}$ and $\vec{v}$ be vectors in $\RR^n$.  The \dfn{dot
@@ -269,6 +114,145 @@ Dot product
 $$\vec{u}\dotp\vec{v}=\begin{bmatrix}u_1\\u_2\\\vdots\\u_n\end{bmatrix}\dotp\begin{bmatrix}v_1\\v_2\\\vdots\\v_n\end{bmatrix}=u_1v_1+u_2v_2+\ldots+u_nv_n$$
 %\end{definition}
 \end{expandable}
+
+parametric equations
+equation of a plane
+head-to-tail rule
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0030/main}{Head-to-tail vector addition rule}
+length (norm, magnitude) of a vector
+\begin{expandable}
+  %  \begin{definition}
+Let $\vec{v}=\begin{bmatrix}v_1\\ v_2\\ \vdots \\v_n\end{bmatrix}$ be a vector in $\RR^n$, then the \dfn{length}, or the \dfn{magnitude}, of $\vec{v}$ is given by
+$$  \norm{\vec{v}}=\sqrt{v_1^2+v_2^2+\ldots +v_n^2}$$
+%\end{definition}
+\end{expandable}
+normal vector
+orthogonal vectors
+parallel vectors
+\begin{expandable}
+    Two vectors are parallel if they are non-zero scalar multiples of each other.
+\end{expandable}
+parallelogram rule
+\href{https://ximera.osu.edu/oerlinalg/LinearAlgebra/VEC-0030/main}{Parallelogram rule for vector addition}
+parametric equations of a line
+projection of a vector onto a vector
+Pythagoras’ Theorem
+\begin{expandable}
+    You know the one!  Where have we used it in the context of points? 
+ vectors?
+\end{expandable}
+scalar multiplication 
+\begin{expandable}
+    Let $\vec{u}=\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}$ be a vector in $\RR^n$, and let $k$ be a scalar, then
+  $$k\vec{u}=k\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}=\begin{bmatrix}
+ku_1\\
+ku_2\\
+\vdots\\
+ku_n
+\end{bmatrix}$$
+\end{expandable}
+
+standard unit vectors
+\begin{expandable}
+    %\begin{definition}
+  Let $\vec{e}_i$ denote a vector that has $1$ as the $i^{th}$ component and zeros elsewhere.  In other words, $$\vec{e}_i=\begin{bmatrix}
+0\\
+0\\
+\vdots\\
+1\\
+\vdots\\
+0
+\end{bmatrix}$$ 
+  where $1$ is in the $i^{th}$ position.  We say that  $\vec{e}_i$ is a \dfn{standard unit vector of $\RR^n$}.
+%\end{definition}
+\end{expandable}
+Triangle Inequality
+unit vector
+\begin{expandable}
+    A vector of length 1.
+\end{expandable}
+vector
+vector addition
+\begin{expandable}
+  Let $\vec{u}=\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}$ and $\vec{v}=\begin{bmatrix}
+v_1\\
+v_2\\
+\vdots\\
+v_n
+\end{bmatrix}$ be vectors in $\RR^n$.  We define $\vec{u}+\vec{v}$ by
+  $$\vec{u}+\vec{v}=\begin{bmatrix}
+u_1\\
+u_2\\
+\vdots\\
+u_n
+\end{bmatrix}+\begin{bmatrix}
+v_1\\
+v_2\\
+\vdots\\
+v_n
+\end{bmatrix}=\begin{bmatrix}
+u_1+v_1\\
+u_2+v_2\\
+\vdots\\
+u_n+v_n
+\end{bmatrix}$$
+  \end{expandable}
+zero vector
+\begin{expandable}
+    A vector of zero length.  The zero vector has no direction.
+\end{expandable}
+
+
+
+
+
+
+
+
+
+
+\begin{tikzpicture}[scale=1]
+   \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;
+ \end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+Dot product 
 
 \begin{tikzpicture}[scale=1]
    \filldraw[teal, opacity=0.3](0,0)--(20,0)--(20,0.1)--(0,0.1)--cycle;

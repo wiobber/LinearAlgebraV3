@@ -31,9 +31,10 @@
 
 %\renewcommand{\desmosThreeD}[3]{\HCode{<iframe src="https://www.desmos.com/3d/#1" width="100\%" height="#3px" frameborder=0>This browser does not support embedded elements.</iframe>}}
 
+\newcounter{unnumbered}
+\renewcommand{\theunnumbered}{}  % Redefine the counter representation to be empty
 
-
-\newtheorem{bookSection}{}
+\newtheorem*{bookSection}{}
 \newtheorem{general}{Generalization}
 \newtheorem{initprob}{Exploration Problem}
 

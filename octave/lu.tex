@@ -9,13 +9,13 @@
 
 \section*{$LU$-factorization}
 
-This section provides a template for performing LU factorization.  You can access our code through the link at the bottom of the template.  Feel free to modify the code and experiment to learn more!  Alternatively, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE. 
+This section provides a template for performing $LU$-factorization.  You can access our Octave code through the link at the bottom of the template.  Feel free to modify the code and experiment to learn more!  Alternatively, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE. 
 
 Before we proceed with the code, recall that if the elementary matrices used to reduce the given matrix to row-echelon form are all lower triangular, then we can find an $LU$ factorization.  In general, the following theorem applies.
 
 \begin{theorem}[\ref{th:LUPA}]
 Suppose an $m \times n$ matrix $A$ is transformed to a row-echelon matrix $U$ using Gaussian elimination. Let $P_1, P_2, \ldots, P_s$ be the elementary matrices corresponding (in order) to the row interchanges used,
-and write $P=P_s \cdots P_2 P_1$. (If no interchanges are used take $P = I_M$.) Then:
+and write $P=P_s \cdots P_2 P_1$. (If no interchanges are used take $P = I$.) Then:
 \begin{enumerate}
 \item $PA$ is the matrix obtained from $A$ by doing these interchanges (in order) to A.
 \item $PA$ has an $LU$ factorization.
@@ -23,7 +23,7 @@ and write $P=P_s \cdots P_2 P_1$. (If no interchanges are used take $P = I_M$.) 
 \end{theorem}
 
 \begin{template}\label{temp:LU}
-We can find $LU$-factorization of a matrix using the code below.  For more information about the meaning of $L$, $U$, and $P$ see Theorem \ref{th:LUPA}  
+We can find $LU$-factorization of a matrix as follows.  
 
 \begin{verbatim}
 % Define matrix A

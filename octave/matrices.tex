@@ -7,7 +7,7 @@
 \end{abstract}
 \maketitle
 
-The templates in this section provide sample code for basic matrix operations.  To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  We also provide a link to our code at the bottom of each template.
+The templates in this section provide sample Octave code for basic matrix operations.  You can access our code through the link at the bottom of each template.  Feel free to modify the code and experiment to learn more!  Alternatively, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE. 
 
 \begin{template}\label{temp:matrixOps}
 
@@ -55,31 +55,6 @@ Sometimes it is useful to generate an identity matrix.  To generate a $5\times 5
 % n by n identity matrix
 I_5=eye(5)
 \end{verbatim}
-\end{template}
-
-\begin{template}\label{temp:LU}
-We can find LU factorization of a matrix as follows.
-
-\begin{verbatim}
-    % Define matrix A
-A=[2 2 -1 2;
-   -1 2 2 1;
-   1 2 0 -2;
-   1 1 -2 -4];
-   
-% Find LU factorization for A   
-[L, U] = lu (A)
-
-% Is this factorization correct?
-L*U
-\end{verbatim}
-
-\href{https://sagecell.sagemath.org/?z=eJxdi8EKAiEYhO-C7zCXhYqElG6xByE6ebXLsgcxpR9KwQyqp8_dpUsMDPMNMx2OIVIKuLta6AXNme4HBQUhoQ6cAXNqkgtNsINQP5ItQ-zHhTnrcKJ0gbGIztdc6OMq5YSYC_S8GMwWdkSP2xMrveZsOp1DofhGvbrajB5_71b4XErwlTOzsV_8KS6E&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
-
-\begin{remark}
-    With the last line of our code we checked the correctness of our factorization.  Did we get the right answer?  Interpret the value $-2.77556e-17$ in the product $LU$.  What do you think caused this value to occur?  
-\end{remark}
-    
 \end{template}
 
 \end{document}

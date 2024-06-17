@@ -57,35 +57,29 @@ I_5=eye(5)
 \end{verbatim}
 \end{template}
 
-\begin{template}\label{temp:matrixRowColEntry}
-    We can access individual rows, columns, and entries of a matrix.
+\begin{template}\label{temp:LU}
+We can find LU factorization of a matrix as follows.
+
 \begin{verbatim}
-% Define a matrix 
-A=[2 -1 3 -1; 1 0 2 1; 1 -1 1 -2]
+    % Define matrix A
+A=[2 2 -1 2;
+   -1 2 2 1;
+   1 2 0 -2;
+   1 1 -2 -4];
+   
+% Find LU factorization for A   
+[L, U] = lu (A)
 
-% Third row of A
-row_3=A(3,:)
-
-% Second column of A
-col_2=A(:,2)
-
-% Second row third entry of A
-a_23=A(2,3)   
+% Is this factorization correct?
+L*U
 \end{verbatim}
-\href{https://sagecell.sagemath.org/?z=eJxVjEEKwjAURPeB3GE2BQsR7M-u0kXAG9SdSAhtigGbQIhYb-9v7cbNMDM8XoWLn0L0cJhdyWGBFKa7EY4NNMcZDU4gbIU_DrpLIUWF6yPkETm9kSYYKbhZ3ZmDVm39I3o_pDhiSM_XHHeKhyWmWkX_1Coqm9LHkj877iytTlK6_gIqSCuZ&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+
+\href{https://sagecell.sagemath.org/?z=eJxdi8EKAiEYhO-C7zCXhYqElG6xByE6ebXLsgcxpR9KwQyqp8_dpUsMDPMNMx2OIVIKuLta6AXNme4HBQUhoQ6cAXNqkgtNsINQP5ItQ-zHhTnrcKJ0gbGIztdc6OMq5YSYC_S8GMwWdkSP2xMrveZsOp1DofhGvbrajB5_71b4XErwlTOzsV_8KS6E&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+
+\begin{remark}
+    With the last line of our code we checked the correctness of our factorization.  Did we get the right answer?  Interpret the value $-2.77556e-17$ in the product $LU$.  What do you think caused this value to occur?  
+\end{remark}
+    
 \end{template}
-
-\begin{example}\label{ex:gauss_octave}
-Use Octave code to show one step of Gaussian elimination by subtracting half of the first row from the second row of the given matrix $A$.
-\begin{verbatim}
-% Define matrix A
-A=[2 -1 3 -1; 1 0 2 1; 1 -1 1 -2] 
-
-% Replace the second row of A with second row minus half the first row.  
-A(2,:)=-1/2*A(1,:)+A(2,:)  
-\end{verbatim}
-
-\href{https://sagecell.sagemath.org/?z=eJxNjMsKwjAURPeB_MNsCvVRNXGndHHBL3ArLkK9IYE2kSRSP99YN26Gw5lhGlzY-sCYTEn-DZKC-ptGp3CscYbCARoLVFdD3yGFFA2u_BzNwCiOkXmI4YEUZ0QLwuyL-5eTD68MZ0a7zK1PuXyLHeoZtXp7WvWd2us1tary5qc-770qUw==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
-\end{example}
 
 \end{document}

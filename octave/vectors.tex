@@ -6,8 +6,9 @@
 \begin{abstract}
 \end{abstract}
 \maketitle
+\section*{Vector Operations}
 
-The templates in this section provide sample code for vector manipulations.  To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  We also provide a link to our code at the bottom of each template.
+The templates in this section provide sample code for vector manipulations.  You can access our code through the link at the bottom of each template.  Feel free to modify the code and experiment to learn more!  Alternatively, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  
 
 \begin{template}\label{temp:vectorOps}
 Here we present basic vector operations.
@@ -31,10 +32,13 @@ norm_v=norm(v)
 
 \href{https://sagecell.sagemath.org/?z=eJxdTUsKwyAQ3QveYTaBpG2gSZqVuCu9RChSolIX0WDMeP2O3TSUWbw37zNTwd1Y5w2gmVOIGyC8vIbMGcppEB1NL25PwVmWU9vTehWDaLuicFbBw1EazxmAs21fJNGDMSJn1qFRKMcTHoz0NqBDgjUGvc8Jgv09Jl2hypKwxktu_mo-xOWb56xQOl2gxuYDFmw51w==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 
+\begin{remark}
+    Note that lines 2 and 3 of our code have a semi-column at the end while lines 6, 9, 12, and 15 do not.  Remove the semi-column from lines 2 and 3, add semi-columns to the other lines.  What happens?
+\end{remark}
 \end{template}
 
 \begin{example}\label{ex:angleInOctave}
-    Here we demonstrate how to find the angle between vectors $\vec{v}$ and $\vec{w}$ from the previous example.  Note the use and the syntax for the $\arccos{}$ function.
+    Here we demonstrate how to find the angle between vectors $\vec{v}$ and $\vec{w}$ from the previous example.  Note the syntax for the $\arccos{}$ function.
     \begin{explanation}
         \begin{verbatim}
 % Define vectors v and w
@@ -65,7 +69,7 @@ cross_v_w=cross(v,w)
 \end{template}
 
 \begin{example}\label{ex:orthInOctave}
-    Use vectors $\vec{v}$ and $\vec{w}$ from \ref{temp:cross} to illustrate that the cross product of two vectors is orthogonal to both vectors.
+    Use vectors $\vec{v}$ and $\vec{w}$ from Template \ref{temp:cross} to illustrate that the cross product of two vectors is orthogonal to both vectors.
     \begin{explanation}
         \begin{verbatim}
 % Define vectors v and w
@@ -84,17 +88,5 @@ dot(cross_v_w,w)
     \end{explanation}
 \end{example}
 
-\begin{template}\label{temp:vectorComp}
-    It is often useful to extract individual components of a vector. For example, given vector $\vec{v}=\begin{bmatrix}1\\-2\\-5\end{bmatrix}$, let's find the third component of $\vec{v}$.
-\begin{verbatim}
-% Define vector v
-v=[1;-2;-5];
-
-% Find the third component of v
-v_3=v(3)
-\end{verbatim}
-
-    \href{https://sagecell.sagemath.org/?z=eJxTVXBJTcvMS1UoS00uyS9SKOPlKrONNrTWNbLWNY215uXi5VJVcMvMS1EoyUgF4syiFIXk_NyC_LzUvBKF_DSwhnhj2zINY00AVTYWYw==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
-\end{template}
-  
+ 
 \end{document}

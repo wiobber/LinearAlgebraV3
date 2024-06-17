@@ -37,16 +37,18 @@ x = A \ b
 
 \href{https://sagecell.sagemath.org/?z=eJxFjsEKwjAQRO-B_Ye59FjYBD0FDwH_wGP1YMIGA7aBNpT69yZIcG-PeczsgKvEtAjKSxCyxJhCkqVgfpY1HXCkHC6YNEYNBltSaGcwGmiYzowW6z9yVfSjMqmhb-wSSl7hSfnWyfZk2Z67dMvv_ffH9tmKzCB1VM3hDv8FLh8nkA==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 
-\end{template}
-
-The system in Template \ref{temp:systems1} has a unique solution.  Try manipulating the system so that it has infinitely many solutions or no solutions.  Run the code to see what happens.  You will observe the following:
+\begin{warning}
+    The system above has a unique solution.  Try manipulating the system so that it has infinitely many solutions or no solutions.  Run the code to see what happens.  You will observe the following:
 
 \begin{itemize}
     \item If a system has infinitely many solutions, Octave will find one particular solution.
     \item If a system has no solutions, Octave will find an approximate solution using least-squares.  We will cover this method in \href{https://ximera.osu.edu/linearalgebrav3/LinearAlgebraInteractiveIntro/RTH-0030/main}{Least-Squares Approximation}.
 \end{itemize}
+\end{warning}
 
-When solving systems by hand, you utilized Gauss-Jordan elimination to reduce the augmented matrix to its reduced row echelon form.  Having the reduced row echelon form available made it easy to write out the solution(s) or determine that the system is inconsistent.  We can find rref and the rank of a matrix in Octave as follows.
+\end{template}
+
+Due to the behavior of $A\setminus B$ function noted in the warning above, it is often more convenient to solve a system by referencing its reduced row echelon form.  When solving systems by hand, you utilized Gauss-Jordan elimination to find rref.  Having the reduced row echelon form available made it easy to write out the solution(s) or determine that the system is inconsistent.  We can find rref and the rank of a matrix using Octave as follows.
 
 \begin{template}\label{temp:rref}
 We will use the same system of equations as in Template \ref{temp:systems1}.
@@ -69,8 +71,5 @@ rank(A_b)
 \end{template}
 
 
-
-
-% add rref
   
 \end{document}

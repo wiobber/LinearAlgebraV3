@@ -26,8 +26,8 @@ Given a matrix $B$, a basis for $\mbox{col}(B)$ can be found as follows:
 We will implement this procedure in Octave.
 
 \begin{template}\label{temp:colSpace}
-We will use matrix $$A=\begin{bmatrix}2&-1&1&-4&1\\1&0&3&3&0\\-2&1&-1&5&2\\4&-1&7&2&1\end{bmatrix}$$
-of Example \ref{ex:basiscolspace}.  We can use Octave to find the reduced row-echelon form of $A$, and identify the pivot columns visually.  We can also take advantage of the expanded version of the \emph{rref} command to identify the pivot columns automatically, as shown below.
+Let $$A=\begin{bmatrix}2&-1&1&-4&1\\1&0&3&3&0\\-2&1&-1&5&2\\4&-1&7&2&1\end{bmatrix}$$
+as in Example \ref{ex:basiscolspace}.  We can use Octave to find the reduced row-echelon form of $A$, and identify the pivot columns visually.  We can also take advantage of the expanded version of the \emph{rref} command to identify the pivot columns automatically, as shown below.
 
 \begin{verbatim}
 % Define A
@@ -62,7 +62,7 @@ We can use the reduced row-echelon form (\emph{rref} command) to find the null s
 As you work with Octave, you may come across the \emph{null} command.  This command finds an orthonormal basis for the null space.  An orthonormal set of vectors consists of unit vectors that are pairwise orthogonal.  We demonstrate the \emph{null} function below.
 
 \begin{template}
-    We will use the matrix in Example \ref{ex:dimnull}.  Let 
+    We will use the matrix from Example \ref{ex:dimnull}.  Let 
 $$A=\begin{bmatrix}2&-1&1&-4&1\\1&0&3&3&0\\-2&1&-1&5&2\\4&-1&7&2&1\end{bmatrix}$$
 Find $\mbox{null}(A)$.
 

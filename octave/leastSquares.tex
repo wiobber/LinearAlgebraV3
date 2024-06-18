@@ -1,0 +1,97 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+
+\title{Least Squares} \license{CC BY-NC-SA 4.0}
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+\section*{Least Squares}
+
+The templates in this section provide code samples for implementing the least squares method. You can access our Octave code through the link at the bottom of each template.  Feel free to modify the code and experiment to learn more!  Alternatively, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  
+
+When implementing least squares by hand, you probably utilize the process established by the following theorem.
+
+\begin{theorem}[\ref{th:bestApprox}]
+    Let $A$ be an $m\times n$ matrix, let $\vec{b}$ be a column vector in $\RR^m$.  Consider the matrix equation
+    $$A\vec{x}=\vec{b}$$
+    \begin{enumerate}
+        \item Any solution $\vec{z}$ to the normal equations
+        $$\left(A^TA\right)\vec{z}=A^T\vec{b}$$
+        is a best approximation to a solution to $A\vec{x}=\vec{b}$ in the sense that $\norm{\vec{b}-A\vec{z}}$ is minimized.
+        \item If the columns of $A$ are linearly independent, then $A^TA$ is invertible and $\vec{z}$ is given uniquely by
+        $$\vec{z}=\left(A^TA\right)^{-1}A^T\vec{b}$$
+    \end{enumerate}
+    \end{theorem}
+
+We can implement the process suggested by the theorem as follows.
+
+\begin{template}\label{temp:leastSq}
+    We show how to find a least squares solution to 
+
+    \begin{verbatim}
+% Define matrix A
+A=[9 -3 3;
+    1 -1 1;
+    4 0 1;
+    1 1 1; 
+    9 -1 2];
+        
+% Define vector b
+b=[3;1;1;2;4];
+
+% Now we solve for z
+z=inv(transpose(A)*A)*transpose(A)*b
+    \end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJxTVXBJTcvMS1XITSwpyqxQcOTlcrSNtlTQNVYwtublUgACQwVdQwVDKMdEwQDONgRBawUIxxKkyigWKgUCvFyqMMPLUpNL8osUkni5kmyjja0NgdDI2gSkGKTIL79coTxVoTg_pyxVIQ2oroqXq8o2M69Mo6QoMa-4IL84VcNRUwuIUPhJAN_XLTM=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.    
+\end{template}
+
+\begin{warning}
+    Finding matrix inverses is computationally expensive, and unstable.  For this reason various factoring/decomposition techniques, such as $LU$ and $QR$ factorizations are used.  
+\end{warning}
+
+As remarked in Template \ref{temp:systems1}, backslash operator ($\setminus$) can be used to implement least squares in Octave.  Depending on the type of matrix, backslash uses different techniques to compute the least squares solution more efficiently.  The following template will allow you to compare answers and computing times for the two implementations of least squares.
+
+\begin{template}\label{temp:LeastSquaresComp}
+We will compare the performance of two implementations of least squares for a $7\times 3$ coefficient matrix.
+
+    \begin{verbatim}
+% Define matrix A
+A=[9 -3 3;
+    1 -1 1;
+    4 0 1;
+    1 1 1; 
+    9 -1 2;
+    -2 8 7;
+    1 1 -5];
+        
+% Define vector b
+b=[3;1;1;2;4;1;-3];
+
+% Start the timer
+tic
+
+% Implement least squares using our original method
+z1=inv(transpose(A)*A)*transpose(A)*b
+
+% Stop the timer
+toc
+
+% Start the timer
+tic
+
+z2=A\b
+
+% Stop the timer
+toc
+    \end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJx9TkFqwzAQvAv0h7kE0oKgslPaYHww9NJzjkkPsrtNBJbkSusQ8vpYxCnNod1Zlh12htkF3ujLeoIzHO0JjRRNvV1DlSgrKTCVhtLQM1nh6WfXGRWuZJ1VxXxRBV7x8kumnj9mlkuKxS32SB2HiFaKtt6WlZ5QVKtpqjI7snLDJjL4QGDrKErBtrte3t3QkyPP6MkkRvoeTaSEMVm_RxgjQrR7600PR3wIn1KcdW39ccnR-DSERMvm4XHqO97ecsNwFxu6_x86F3Wz-9t8Af-UXbs=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.   
+
+Each time you run the algorithm, you will get slightly different run times for each implementation.  Most of the time, you will see that the backslash operator outperforms our initial method. 
+\end{template}
+
+
+
+\end{document}

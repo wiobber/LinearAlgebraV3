@@ -26,8 +26,8 @@ Given a matrix $B$, a basis for $\mbox{col}(B)$ can be found as follows:
 We will implement this procedure in Octave.
 
 \begin{template}\label{temp:colSpace}
-Let $$A=\begin{bmatrix}2&-1&1&-4&1\\1&0&3&3&0\\-2&1&-1&5&2\\4&-1&7&2&1\end{bmatrix}$$
-as in Example \ref{ex:basiscolspace}.  We can use Octave to find the reduced row-echelon form of $A$, and identify the pivot columns visually.  We can also take advantage of the expanded version of the \emph{rref} command to identify the pivot columns automatically, as shown below.
+We will use the matrix from Example \ref{ex:basiscolspace}.  Let $$A=\begin{bmatrix}2&-1&1&-4&1\\1&0&3&3&0\\-2&1&-1&5&2\\4&-1&7&2&1\end{bmatrix}$$
+We can use Octave to find the reduced row-echelon form of $A$ (\emph{rref} command), and identify the pivot columns visually.  We can also take advantage of the expanded version of the \emph{rref} command to identify the pivot columns automatically, as shown below.
 
 \begin{verbatim}
 % Define A

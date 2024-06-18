@@ -26,7 +26,7 @@ Given a matrix $B$, a basis for $\mbox{col}(B)$ can be found as follows:
 We will implement this procedure in Octave.
 
 \begin{template}\label{temp:colSpace}
-For this template we will use matrix $$A=\begin{bmatrix}2&-1&1&-4&1\\1&0&3&3&0\\-2&1&-1&5&2\\4&-1&7&2&1\end{bmatrix}$$
+We will use matrix $$A=\begin{bmatrix}2&-1&1&-4&1\\1&0&3&3&0\\-2&1&-1&5&2\\4&-1&7&2&1\end{bmatrix}$$
 of Example \ref{ex:basiscolspace}.  We can use Octave to find the reduced row-echelon form of $A$, and identify the pivot columns visually.  We can also take advantage of the expanded version of the \emph{rref} command to identify the pivot columns automatically, as shown below.
 
 \begin{verbatim}
@@ -57,7 +57,9 @@ Recall the following definition of the null space of a matrix.
 \begin{definition}[\ref{def:nullspace}] Let $A$ be an $m\times n$ matrix.  The \dfn{null space} of $A$, denoted by $\mbox{null}(A)$, is the set of all vectors $\vec{x}$ in $\RR^n$ such that $A\vec{x}=\vec{0}$.
 \end{definition}
 
-We can use the reduced row-echelon form to find the null space, as shown in Example \ref{ex:dimnull}.  As you work with Octave, you may come across the \emph{null} command.  This command finds an orthonormal basis for the null space.  An orthonormal set of vectors consists of unit vectors that are pairwise orthogonal.  We demonstrate the \emph{null} function below.
+We can use the reduced row-echelon form (\emph{rref} command) to find the null space, as shown in Example \ref{ex:dimnull}.  We will omit the details here.
+
+As you work with Octave, you may come across the \emph{null} command.  This command finds an orthonormal basis for the null space.  An orthonormal set of vectors consists of unit vectors that are pairwise orthogonal.  We demonstrate the \emph{null} function below.
 
 \begin{template}
     We will use the matrix in Example \ref{ex:dimnull}.  Let 

@@ -74,7 +74,7 @@ rank(A_b)
     The \emph{rref} function utilizes a modified version of the Gauss-Jordan elimination algorithm (\href{https://www.mathworks.com/help/matlab/ref/rref.html}{Reference Link}).  For some matrices implementing this algorithm directly leads to round-off errors and other problems that are outside the scope of this text.  While the backslash operator ($\setminus$) is a relatively robust operator, it too, can lead to computational problems.  We illustrate what can happen in the next example.   
 \end{warning}
 
-\begin{example}
+\begin{example}\label{ex:rrefFail}
     We will use a $12\times 12$ Hilbert matrix to illustrate how the \emph{rref} function and the backslash operator ($\setminus$) can fail.  You can learn more about Hilbert matrices \href{https://en.wikipedia.org/wiki/Hilbert_matrix}{here}.
 
 \begin{verbatim}
@@ -102,6 +102,10 @@ A*x
 
 Observe that $A\vec{x}\neq\vec{b}$. 
 \end{example}
+
+\subsection*{Acknowledgements}
+
+The inspiration for Example \ref{ex:rrefFail} came from \href{https://stackoverflow.com/questions/42893111/matlab-rref-function-precision-error-after-12th-column-of-hilbert-matrices}{this} \emph{Stack Overflow} comment.
 
   
 \end{document}

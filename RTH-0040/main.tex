@@ -206,16 +206,18 @@ The \dfn{QR-algorithm} uses QR-factorization repeatedly to create a sequence of 
 
 \begin{algorithm}\label{alg:qrEig}
 Let $A$ be an invertible matrix.
-\begin{enumerate}
-\item Define $A_{1} = A$ and factor it as $A_{1} = Q_{1}R_{1}$.
 
-\item Define $A_{2} = R_{1}Q_{1}$ and factor it as $A_{2} = Q_{2}R_{2}$.
+\emph{Step 1}: Define $A_{1} = A$ and factor it as $A_{1} = Q_{1}R_{1}$.
 
-\item Define $A_{3} = R_{2}Q_{2}$ and factor it as $A_{3} = Q_{3}R_{3}$.
-\\ $\vdots$
-\end{enumerate}
+\emph{Step 2}: Define $A_{2} = R_{1}Q_{1}$ and factor it as $A_{2} = Q_{2}R_{2}$.
 
-In general, $A_{k}$ is factored as $A_{k} = Q_{k}R_{k}$ and we define $A_{k + 1} = R_{k}Q_{k}$. Then $A_{k + 1}$ is similar to $A_{k}$ [in fact, $A_{k+1} = R_{k}Q_{k} = (Q_{k}^{-1}A_{k})Q_{k}$], and hence each $A_{k}$ has the same eigenvalues as $A$. If the eigenvalues of $A$ are real and have distinct absolute values, the sequence of matrices $A_{1}, A_{2}, A_{3}, \dots$ converges to an upper triangular matrix with these eigenvalues on the main diagonal. [See below for the case of complex eigenvalues.]
+\emph{Step 3}: Define $A_{3} = R_{2}Q_{2}$ and factor it as $A_{3} = Q_{3}R_{3}$.
+
+ $\vdots$
+ 
+\emph{Step $k+1$}: Define $A_{k + 1} = R_{k}Q_{k}$ (where $A_{k} = Q_{k}R_{k}$). 
+
+Note that $A_{k + 1}$ is similar to $A_{k}$ (in fact, $A_{k+1} = R_{k}Q_{k} = (Q_{k}^{-1}A_{k})Q_{k}$), and hence each $A_{k}$ has the same eigenvalues as $A$. If the eigenvalues of $A$ are real and have distinct absolute values, the sequence of matrices $A_{1}, A_{2}, A_{3}, \dots$ converges to an upper triangular matrix with these eigenvalues on the main diagonal. We will discuss the complex case eigenvalue case below.
 \end{algorithm}
 
 \begin{example}\label{QR-algortihm-2x2-025425}

@@ -204,18 +204,19 @@ In \href{}{The Power Method and the Dominant Eigenvalue}, we learned about an it
 
 The \dfn{QR-algorithm} uses QR-factorization repeatedly to create a sequence of matrices $A_{1} =A, A_{2}, A_{3}, \dots,$ as follows:
 
+\begin{algorithm}\label{alg:qrEig}
+Let $A$ be an invertible matrix.
 \begin{enumerate}
 \item Define $A_{1} = A$ and factor it as $A_{1} = Q_{1}R_{1}$.
 
 \item Define $A_{2} = R_{1}Q_{1}$ and factor it as $A_{2} = Q_{2}R_{2}$.
 
 \item Define $A_{3} = R_{2}Q_{2}$ and factor it as $A_{3} = Q_{3}R_{3}$.
-\\ \hspace*{4em} $\vdots$
-
-
+\\ $\vdots$
 \end{enumerate}
 
-In general, $A_{k}$ is factored as $A_{k} = Q_{k}R_{k}$ and we define $A_{k + 1} = R_{k}Q_{k}$. Then $A_{k + 1}$ is similar to $A_{k}$ [in fact, $A_{k+1} = R_{k}Q_{k} = (Q_{k}^{-1}A_{k})Q_{k}$], and hence each $A_{k}$ has the same eigenvalues as $A$. If the eigenvalues of $A$ are real and have distinct absolute values, the remarkable thing is that the sequence of matrices $A_{1}, A_{2}, A_{3}, \dots$ converges to an upper triangular matrix with these eigenvalues on the main diagonal. [See below for the case of complex eigenvalues.]
+In general, $A_{k}$ is factored as $A_{k} = Q_{k}R_{k}$ and we define $A_{k + 1} = R_{k}Q_{k}$. Then $A_{k + 1}$ is similar to $A_{k}$ [in fact, $A_{k+1} = R_{k}Q_{k} = (Q_{k}^{-1}A_{k})Q_{k}$], and hence each $A_{k}$ has the same eigenvalues as $A$. If the eigenvalues of $A$ are real and have distinct absolute values, the sequence of matrices $A_{1}, A_{2}, A_{3}, \dots$ converges to an upper triangular matrix with these eigenvalues on the main diagonal. [See below for the case of complex eigenvalues.]
+\end{algorithm}
 
 \begin{example}\label{QR-algortihm-2x2-025425}
 If $A = \left[ \begin{array}{rr}

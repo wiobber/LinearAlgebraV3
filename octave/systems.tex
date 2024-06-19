@@ -70,6 +70,38 @@ rank(A_b)
 \href{https://sagecell.sagemath.org/?z=eJxFjsEKwjAMhu-FvsN_Gehh0A49iYfB8CVEpOvSWWSt1Co-vumkmBCS_-cjSYOBnA-EfCOY17xQyDRhMTn5D2xMiZ6PGCYfZuS4UjaSc956JivXw4QJb7I5JoxS9NcRR5w1Wg1V8iAFSnRoO2huu-oo6F_9DYXC7C_VkaLByfMBfsYhOvB6KYrY8LSVgoUJ91V8ASwdNw8=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.    
 \end{template}
 
+\begin{warning}
+    The \emph{rref} function utilizes a modified version of the Gauss-Jordan elimination algorithm (\href{https://www.mathworks.com/help/matlab/ref/rref.html}{Reference Link}).  For some matrices implementing this algorithm directly leads to round-off errors and other problems that are outside the scope of this text.  While the backslash operator ($\setminus$) is a relatively robust operator, it too, can lead to computational problems.  We illustrate what can happen in the next example.   
+\end{warning}
+
+\begin{example}
+    We will use a $12\times 12$ Hilbert matrix to illustrate how the \emph{rref} function and the backslash operator ($\setminus$) can fail.  You can learn more about Hilbert matrices \href{https://en.wikipedia.org/wiki/Hilbert_matrix}{here}.
+
+\begin{verbatim}
+% Use a 12 by 12 Hilbert matrix
+A=hilb(12);
+
+% Theoretical rank of A is 12, but the following computation shows a rank of 11
+rank(A)
+
+% rref of A should be the identity matrix, but the following result contains a row of zeros
+rref(A)
+
+% We will now attempt to solve a system Ax=b, for the given b
+b=[1;1;1;1;1;1;1;1;1;1;1;1.1];
+
+% We'll use backslash to attempt to find a solution
+x=A\b
+
+% Test to see if Ax=b
+A*x
+
+\end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJxtkbFuwyAQhnck3uGWqEkVVSJr5MFbH6BVh7YD2OcYBUMER2z36XvYSdUhQkLodHzf8bOB94SgQR3AzGV_tc5gJBg0RTtJUVc9V7bqsDtKIcUG3noMEck22kHU_gyhgxps4st7MJmAeoQuOBdG60_QhOGSSZMNHlIfxsSy-zWlpCjnbb1b2TFit_K4NbsWDC4426InS_NtqkeeiCk7Yp0nbf1iCWNh_WAMiT2M_vN8IIzWOfDcoolwuDAuQAruWsJIc-Ia1FNl9qyIi-pkr-jBSGGqT3V8uF7U9_EueGJ85miNbs7J6dQXwT9XZ31bVMHlko0UU1V_mVvEmNZ5kJ_eLXPwRzxPv6PhhhA=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+
+Observe that $A\vec{x}\neq\vec{b}$. 
+\end{example}
 
   
 \end{document}

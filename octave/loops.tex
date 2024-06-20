@@ -10,7 +10,7 @@
 
 This tutorial will introduce \emph{for} and \emph{while} loops. You can access our Octave code through the link at the bottom of each template.  Feel free to modify the code and experiment to learn more!  Alternatively, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.  
 
-Loops are used to generate a sequence of objects (such as numbers or vectors) according to some rule.  We will start with a simple \emph{for} loop.  Every time you perform the steps inside the loop, you come back to the beginning, and increase the index $i$ by 1.  Try to guess the outcome of the loop in each example, then run the code to verify your guess.
+Loops are used to generate sequences of objects (such as numbers or vectors) according to some rule.  We will start with a simple \emph{for} loop.  Every time you perform the steps inside the loop, you come back to the beginning, and increase the index $i$ by 1 until you reach the desired number of iterations.  Try to guess the outcome of the loop in each example, then run the code to verify your guess.
 
 \begin{example}\label{ex:loop1}
         \begin{verbatim}
@@ -53,12 +53,11 @@ Do you recognize this famous sequence?
 1&x_2&x_2^2&\dots&x_2^{n-1}\\
 \vdots&\vdots&\vdots&\ddots&\vdots\\
 1&x_n&x_n^2&\dots&x_n^{n-1}\end{bmatrix}$$
-We will use a emph{nested} loop to create a $5\times 5$ Vandermonde matrix for $x_1=2, x_2=-1, x_3=5, x_4=-2, x_5=3$.  We recommend that you create this matrix by hand first, then study and run the code.
+We will use a \emph{nested} loop to create a $5\times 5$ Vandermonde matrix for $x_1=2, x_2=-1, x_3=5, x_4=-2, x_5=3$.  We recommend that you create this matrix by hand first, then study and run the code.
 
 \begin{verbatim}
-% Define a vector [x_1, ..., x_5]
+% Define the vector [x_1, ..., x_5]
 w=[2 -1 5 -2 3];
-
 
 % This nested loop creates a 5x5 Vandermonde matrix
 for i=1:5

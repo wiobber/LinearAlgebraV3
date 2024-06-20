@@ -48,7 +48,7 @@ x = A \ b
 
 \end{template}
 
-Due to the behavior of $A\setminus b$ function noted in the warning above, it is often more convenient to solve a system by referencing its reduced row echelon form.  When solving systems by hand, you utilized Gauss-Jordan elimination to find rref.  Having the reduced row echelon form available made it easy to write out the solution(s) or determine that the system is inconsistent.  We can find rref and the rank of a matrix using Octave as follows.
+Due to how the backslash operator ($\setminus$) functions (see the warning above), we recommend that you solve systems by using the reduced row echelon form.  When solving systems by hand, you utilized Gauss-Jordan elimination to find rref.  Having the reduced row echelon form available made it easy to write out the solution(s) or determine that the system is inconsistent.  We can find rref and the rank of a matrix using Octave as follows.
 
 \begin{template}\label{temp:rref}
 We will use the same system of equations as in Template \ref{temp:systems1}.

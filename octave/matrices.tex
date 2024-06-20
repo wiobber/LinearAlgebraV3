@@ -50,11 +50,30 @@ det_C=det(C)
 \end{template}
 
 \begin{template}\label{temp:id_matrix}
-Sometimes it is useful to generate an identity matrix.  To generate a $5\times 5$ identity matrix, use the code below.
+Sometimes it is useful to generate a commonly used matrix or a vector (e.g. identity matrix, zero vector). 
 \begin{verbatim}
-% n by n identity matrix
+% 5 by 5 identity matrix
 I_5=eye(5)
+
+% 5 by 5 zero matrix
+O_5=zeros(5)
+
+% The zero vector in R^5
+O_col=zeros(5,1)
+
+% Row of zeros
+O_row=zeros(1,5)
+
+% Non-square zero matrix
+O_block=zeros(2,3)
+
+% Matrix filled with 1s
+One_block=ones(2,3)
+
+% How would you generate a matrix filled with 3s?
 \end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJxdzj0PgjAQBuCdhP9wC4kmOCBhNK46qAlx1vBxSGPtxbZY66-XYiHqcsPdc-9dBBmUti-sRqGZtnArtGTPMNiesxVanGXzMAiDaHQvlDSZQ29cQ03q2OKHPLDSJIEJyE-ZkxXx0caJ1zkZoGZYUM5IMt4k8Zi4J7FQ966Q-H-75FRdvV_Gqfe7YQ4N4xxrMEy3kLhwgX6BBH77Tf-DoY7XYKmDCwqUhUYo_KGfoFSt342kXHo=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 \end{template}
 
 \end{document}

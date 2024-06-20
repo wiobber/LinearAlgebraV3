@@ -77,15 +77,26 @@ A = [2 -1 1 -4 1;
 % Octave constructs an orthonormal basis, meaning that the basis elements are pairwise orthogonal unit vectors.
 B=null(A)
 
-% Verify that each vector in the basis is a unit vector
-norm(B(:,1))
-norm(B(:,2))
+% To find the dimension of the null space, find the number of columns in B
+[rows, cols]=size(B)
 
-% Verify that the two vectors are orthogonal
-dot(B(:,1),B(:,2))
+% Verify that the columns of B are unit vectors
+for i=1:cols
+    norm(B(:,i))
+end    
+
+% Verify that the columns of B are pairwise orthogonal
+for i=1:cols
+    counter=i+1;
+        while counter <= cols
+            dot(B(:,i),B(:,counter))
+            counter=counter+1;
+        end
+end
+
 \end{verbatim}
 
-\href{https://sagecell.sagemath.org/?z=eJxtjkFLxDAUhO-B_Ie5LLTQyqauLCh7aPHuzYt4iPV1G2hfJEl38d-b2Kg9mITAm2S-mR0eaTBMaKVoccJLg1pBoT5APUiBuBT2uI17n-e6Se8Kd2iyckjjEVF_jYoUO3TaG4_BOvAyTUVbJvGpD_pC6C374JY-eGiGdWG0bN2sJ7wlV4WZNBs-I4w6xItWHTTRTJxcjvChjbsaT6v_bDnaFzYBF-qDdf5Giu70m53Sn8mZ4XOFku7H_BOGNxnx6C1HilSt6Ir7SpXlZmrKf7CJE672p8N30b9-UrzbkFFVZnwBTjpvrw==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+\href{https://sagecell.sagemath.org/?z=eJyNUU1rwkAQvQfyH95FiDQWYy0F2xwMvfdSehEPa5zoQLIruxul_fWdjUm14MFZyLJv533sZIR3qlgTlnG0RI7VDJMMGSZzZK9xBKkMUzzJmvbnySzcZ3jGrEfm4fgCwdeCxNEIhXLsUBkL3dZ1shwH8KP06kgojXbetqV3UBrG-r3RxjaqxiawUjSkNOsd_F55-dAZB9XUkA4sSzgotid2dObvjBZ6q9njSKU31j3GUZH_eQf3TwN56LYT3LIoOTZiX3VA6IQ7qJLSS5dumw3Z0FKaum20A2sUcbSy5iQxBXTr3PEPJUXv8UWWq-9L8IEnEkUX-zpiHIX5cJ4tgtJ5kmEQSZEsUh6LJEkQqTu1b4zklkVpWu3J5vww_OBQpz3XNNzhLceFMNTW-D5aGra-N-S87hrk-_2fibyne9Qv1h63OQ==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 \end{template}
 
 

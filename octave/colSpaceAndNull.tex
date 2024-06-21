@@ -85,18 +85,22 @@ for i=1:cols
     norm(B(:,i))
 end    
 
-% Verify that the columns of B are pairwise orthogonal
-for i=1:cols
-    counter=i+1;
-        while counter <= cols
-            dot(B(:,i),B(:,counter))
-            counter=counter+1;
-        end
-end
+% Verify that the columns of B are pairwise orthogonal (if more than one column)
+if cols==1
+    disp('The dimension of the null space is 1.');
+else    
+    for i=1:cols
+        counter=i+1;
+            while counter <= cols
+                dot(B(:,i),B(:,counter))
+                counter=counter+1;
+            end
+    end
+end    
 
 \end{verbatim}
 
-\href{https://sagecell.sagemath.org/?z=eJyNUU1rwkAQvQfyH95FiDQWYy0F2xwMvfdSehEPa5zoQLIruxul_fWdjUm14MFZyLJv533sZIR3qlgTlnG0RI7VDJMMGSZzZK9xBKkMUzzJmvbnySzcZ3jGrEfm4fgCwdeCxNEIhXLsUBkL3dZ1shwH8KP06kgojXbetqV3UBrG-r3RxjaqxiawUjSkNOsd_F55-dAZB9XUkA4sSzgotid2dObvjBZ6q9njSKU31j3GUZH_eQf3TwN56LYT3LIoOTZiX3VA6IQ7qJLSS5dumw3Z0FKaum20A2sUcbSy5iQxBXTr3PEPJUXv8UWWq-9L8IEnEkUX-zpiHIX5cJ4tgtJ5kmEQSZEsUh6LJEkQqTu1b4zklkVpWu3J5vww_OBQpz3XNNzhLceFMNTW-D5aGra-N-S87hrk-_2fibyne9Qv1h63OQ==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+\href{https://sagecell.sagemath.org/?z=eJyNUk1PwkAQvTfpf3gXQolAKGJM0B5ovHshXgiHWqYwSbtLdrcQ_fXO9kNUjHGa7LZv582bedsBnqhgRViFwQoJNnNMYsSYLBA_hAEkYsxwK8-s-57M_XmMO8w7ZOE_7yH4VpAwGCDNLFsU2kDVZRmtRh58zl12IuRaWWfq3FlkCtq4g1baVFmJV88ao6JMsdrDHTInC7U4qKSKlGcZwjFjc2ZLLX-vldBrxQ4nyp02dhoGafKp7dXXGjLorim4Y6lkWYt80QA-E_aY5TS-ZKm6eiXjU3Jd1pWyYIU0DDZGn6VNAe02sfxOUdppvJDh4u3SeM-TEmnT9tcWw8D7w0m89JVaJ70RURotxzySkiSNSPyz9m-WRFyg0nIoNBlW9TQpzs1YNkniVnrH9hgN13-7A7mHeDocyTVTKVJNd369HsVHrmvlyCR80_9MfZwPXFJ_jscE34l97LTr7Bj7rcv33vzM7KW6_UpQvGyB5kWWD1s72pc=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 \end{template}
 
 

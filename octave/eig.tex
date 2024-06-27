@@ -21,12 +21,12 @@ A=[5 0 0; 1 2 -1; 1 3 -2];
 eigen=eig(A)
 
 % Find eigenvalues and eigenvectors of A
-[P,D]=eig(A)
+[V,D]=eig(A)
 % D is a diagonal matrix whose diagonal entries are the eigenvalues of A
-% Columns of P are the eigenvectors of A 
+% Columns of V are the eigenvectors of A 
 \end{verbatim}
 
-\href{https://sagecell.sagemath.org/?z=eJx1jkELgkAUhO8L_oe5LBQkqNFJPCxJZ-_iYcmnPtBdWNfq56dCFlGXN8ww32MkcmrYEFQgVFaeECFKESNBGC96RJhUaSACIXFhU4O4JXPT_UQjbLNga5LNd6f2f4p683T11r3Isjjk1UZK5OC5i5p1a43uMWjv-IF7Z0d6p2TmdHnqCL6jH4skzrafBrP64qv4seAJvb5N2g==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+\href{https://sagecell.sagemath.org/?z=eJx1jkELgkAUhO8L_oe5LBQkqNFJPCxJP8GLeFjyqQ90F9a1-vmpkEXU5Q0zzPcYiZwaNgQVCJWVJ0SIUsRIEMaLHhEmVRqIQEhc2NQgbsncdD_RCNss2Jpk892p_Z-i3jxdvXUvsiwOebWREjl47qJm3VqjewzaO37g3tmR3imZOV2eOoLv6MciibPtp8Gsvvgqfix4AsFaTeY=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 \end{template}
 
 \begin{template}\label{temp:charPoly}
@@ -77,9 +77,9 @@ sqrt(2)/2  sqrt(2)/2];
 eigen=eig(A)
 
 % Find eigenvalues and eigenvectors of A
-[P,D]=eig(A)
+[V,D]=eig(A)
 % D is a diagonal matrix whose diagonal entries are the eigenvalues of A
-% Columns of P are the eigenvectors of A
+% Columns of V are the eigenvectors of A
 \end{verbatim}
 
 This is what we get for the output:
@@ -89,7 +89,7 @@ eigen =
  (0.707107,0.707107)
  (0.707107,-0.707107)
 
-P =
+V =
 
  (0,0.707107) (0,-0.707107)
  (0.707107,0) (0.707107,-0)
@@ -100,7 +100,7 @@ D =
  (0,0) (0.707107,-0.707107)
 \end{verbatim}
 
-\href{https://sagecell.sagemath.org/?z=eJx1jjELgzAUhPdA_sMtAYWWgmtxkEpnd3EI9amBmGCMbX9-o9BUSrs87n3cHSdQUqcMoeCsyOt5cj7J0lMGHKM-c7bjUTaBcyZwVaYFqZ7MXeqFZthubdtIHm5SpH-MMv5089a9k3V1KJuYFCihghetkr01UmOU3qknHoOd6UPJBLqWOoIf6McigYvVy2i2v_oy7ha8AOuMVgI=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+\href{https://sagecell.sagemath.org/?z=eJx1jkEKgzAURPeB3GE2AYWWgtviQio9ghtxEepXAzHBGNsev1FoKqXdfOY_ZoYRKKlThlBwVuT1PDmfZOkpA45Rnznb8SibwDkTuCrTglRP5i71QjNst7ZtJA83KdI_Rhl_unnr3sm6OpRNTAqUUMGLVsneGqkxSu_UE4_BzvShZAJdSx3BD_RjkcDF6mU02199GXcLXu8oVg4=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 
 Each complex number in the output is presented using its real and imaginary parts as $x$ and $y$ coordinates of a point.  For example, the second eigenvalue, written as $(0.707107,-0.707107)$, is the complex number $\frac{\sqrt{2}}{2}-\frac{\sqrt{2}}{2}i$.  Compare this to the eigenvalue in Example \ref{ex:eigsrotation}.  The corresponding eigenvector is the second column of the matrix $P$: $\begin{bmatrix}(0,-0.707107)\\(0.707107,-0)\end{bmatrix}$.  This should be interpreted as $\begin{bmatrix}(-\sqrt{2}/2)i\\\sqrt{2}/2\end{bmatrix}$.  Compare this to the eigenvector in Example \ref{ex:eigsrotation}.  There is a discrepancy!  Did we make a mistake?  How do we reconcile the two eigenvectors?
 \begin{hint}

@@ -82,7 +82,7 @@ B=null(A)
 
 % Verify that the columns of B are unit vectors
 for i=1:cols
-    norm(B(:,i))
+    NormOfCol=norm(B(:,i))
 end    
 
 % Verify that the columns of B are pairwise orthogonal (if more than one column)
@@ -92,15 +92,15 @@ else
     for i=1:cols
         counter=i+1;
             while counter <= cols
-                dot(B(:,i),B(:,counter))
+                DotProduct=dot(B(:,i),B(:,counter))
                 counter=counter+1;
             end
     end
-end    
+end  
 
 \end{verbatim}
 
-\href{https://sagecell.sagemath.org/?z=eJyNUk1PwkAQvTfpf3gXQolAKGJM0B5ovHshXgiHWqYwSbtLdrcQ_fXO9kNUjHGa7LZv582bedsBnqhgRViFwQoJNnNMYsSYLBA_hAEkYsxwK8-s-57M_XmMO8w7ZOE_7yH4VpAwGCDNLFsU2kDVZRmtRh58zl12IuRaWWfq3FlkCtq4g1baVFmJV88ao6JMsdrDHTInC7U4qKSKlGcZwjFjc2ZLLX-vldBrxQ4nyp02dhoGafKp7dXXGjLorim4Y6lkWYt80QA-E_aY5TS-ZKm6eiXjU3Jd1pWyYIU0DDZGn6VNAe02sfxOUdppvJDh4u3SeM-TEmnT9tcWw8D7w0m89JVaJ70RURotxzySkiSNSPyz9m-WRFyg0nIoNBlW9TQpzs1YNkniVnrH9hgN13-7A7mHeDocyTVTKVJNd369HsVHrmvlyCR80_9MfZwPXFJ_jscE34l97LTr7Bj7rcv33vzM7KW6_UpQvGyB5kWWD1s72pc=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+\href{https://sagecell.sagemath.org/?z=eJyNUstO5DAQvEfKP9QFkdHOIDLLaiXAhwmcFw5oL4hDSDpMS4l7ZDuM2K-nnQdvoe1Idlx2dXWXfYBLatgSNmmygcHtGqscOVYnyM_SBBo5jvFTv-NpvVrH_Ry_sJ6Qk7j8DcXvFEmTAxSlZ49GHGzfttlmEcGrKpSPhEqsD66vgkdpIS5sxYrryhb3kbVER6Vl-4CwLYMONOKgljqykeUIu5Ldnj2N_AexSu8tBzxSFcT5ozQpzIt2VL8RaKP1kLBmzeRZVL4ZgHgSfldWtHw9Zfvunlw8Uknbd9aDLYo0uXWy1zIV9HfG8z_KiknjLzlunl4Ln3maohjKfltimkR_2OSnMdPo5B814qq5kNZES7IiO13yQpOTlqTxnypfmZNxg050U2natp1pmpyHBr0x-VhEzX6XHd587xP0RvKjw4VeOLUqNVQXx89Nxaikt4Gc4R_zs5pjv-WW5n2cG7wnznEp4dpJrc_G1BImZ5ZxmqjRpo-kWXWaP2mrrSMw_OjwDIwb4og=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 \end{template}
 
 

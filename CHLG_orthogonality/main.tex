@@ -11,17 +11,34 @@
 
 \section*{Challenge Problems for Chapter 8}
 
-\begin{problem}\label{prob:8_1_14}
-If $W$ is a subspace of $\RR^n$, show how to find an $n \times n$ matrix $A$ such that $W = \{\vec{x} \mid A\vec{x} = \vec{0}\}$. \begin{hint}Practice Problem~\ref{prob:8_1_13}.\end{hint}
-
+\begin{problem}\label{prob:8_1_13}
+If $U$ is a subspace of $\RR^n$, show that $\left(U^{\perp}\right)^\perp = U$. 
 \begin{hint}
-Let $\{\vec{y}_{1}, \vec{y}_{2}, \dots, \vec{y}_{m}\}$ be a basis of $W^\perp$, and let $A$ be the $n \times n$ matrix with rows $\vec{y}^T_1, \vec{y}^T_2, \dots, \vec{y}^T_m, 0, \dots, 0$. Then $A\vec{x} = \vec{0}$ if and only if $\vec{y}_{i} \dotp \vec{x} = 0$ for each $i = 1, 2, \dots, m$; if and only if $\vec{x}$ is in $W^{\perp \perp} = U$.
+Show that $U \subseteq \left(U^{\perp}\right)^\perp$, then use Theorem~\ref{th:023783c} twice.
 \end{hint}
 \end{problem}
 
+
+\begin{problem}\label{prob:8_1_14}
+If $W$ is a subspace of $\RR^n$, show how to find an $n \times n$ matrix $A$ such that $W = \{\vec{x} \mid A\vec{x} = \vec{0}\}$. 
+
+%\begin{hint}
+%Use Problem~\ref{prob:8_1_13}.
+%\end{hint}
+
+%\begin{hint}
+%Let $\{\vec{y}_{1}, \vec{y}_{2}, \dots, \vec{y}_{m}\}$ be a basis of $W^\perp$, and let $A$ be the $n \times n$ matrix with rows $\vec{y}^T_1, \vec{y}^T_2, \dots, \vec{y}^T_m, 0, \dots, 0$. Then $A\vec{x} = \vec{0}$ if and only if $\vec{y}_{i} \dotp \vec{x} = 0$ for each $i = 1, 2, \dots, m$; if and only if $\vec{x}$ is in $W^{\perp \perp} = U$.
+%\end{hint}
+\end{problem}
+
 \begin{problem}\label{prob:8_1_16}
-If $U$ and $W$ are subspaces, define $U+W$ to be the set of all possible sums of elements of $U$ with elements of $W$.  Is $U+W$ a subspace?
+If $U$ and $W$ are subspaces, define $U+W$ to be the set of all possible sums of elements of $U$ with elements of $W$.
+
+\begin{enumerate} 
+\item Is $U+W$ a subspace?
 Show that $(U + W)^\perp = U^\perp \cap W^\perp$. 
+\item Illustrate this result with a diagram in $\RR^3$ where $U$ and $W$ are two distinct lines through the origin.  what does $U+W$ look like?  What do $U^{\perp}$ and $W^{\perp}$ look like?
+\end{enumerate}
 \end{problem}
 
 \begin{problem}\label{prob:8_1_17.2}

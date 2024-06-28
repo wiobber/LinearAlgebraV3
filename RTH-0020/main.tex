@@ -217,12 +217,10 @@ Let $W$ be a subspace given by $W = \mbox{span}\left(\begin{bmatrix}
   0 \\ 1 \\ 0 \\ 2
   \end{bmatrix}$.  We observe that we have the good fortune that $\vec{f}_1,\vec{f}_2$ is an orthogonal basis for $W$ (otherwise, our first step would be to use the Gram-Schmidt procedure to create an orthogonal basis for $W$).  We compute:
 $$\vec{w}=\mbox{proj}_W(\vec{x})
-      =\vec{x}-\mbox{proj}_{\vec{f}_1}(\vec{x})-\mbox{proj}_{\vec{f}_2}(\vec{x})
-      = \begin{bmatrix}
-  1 \\ 2 \\ 3 \\ 4
-  \end{bmatrix} - \frac{4}{2}\begin{bmatrix}
+      =\mbox{proj}_{\vec{f}_1}(\vec{x})+\mbox{proj}_{\vec{f}_2}(\vec{x})
+      = \frac{4}{2}\begin{bmatrix}
   1 \\ 0 \\ 1 \\ 0
-  \end{bmatrix} - \frac{10}{5}\begin{bmatrix}
+  \end{bmatrix} + \frac{10}{5}\begin{bmatrix}
   0 \\ 1 \\ 0 \\ 2
   \end{bmatrix} = \begin{bmatrix}
   2 \\ 2 \\ 2 \\ 4

@@ -8,7 +8,10 @@
 \end{abstract}
 \maketitle
 
+\begin{onlineOnly}
 \section*{Diagonalizable Matrices and Multiplicity}
+\end{onlineOnly}
+
 %When a matrix is similar to a diagonal matrix, the matrix is said to be \dfn{diagonalizable}. 
 Recall that a \dfn{diagonal matrix} $D$ is a matrix containing a zero in every entry except those on the main diagonal.  More precisely, if $d_{ij}$ is the $ij^{th}$ entry of a diagonal matrix $D$, then
 $d_{ij}=0$ unless $i=j$. Such
@@ -30,20 +33,38 @@ Diagonal matrices have some nice properties, as we demonstrate below.
 Let
 $M =\begin{bmatrix}1 & 2 & 3\\ 4&5&6\\7&8&9\end{bmatrix}$ and let $D =\begin{bmatrix}2 & 0 & 0\\ 0&-5&0\\0&0&10\end{bmatrix}$.  Compute $MD$ and $DM$ using Octave.
 
-To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.
+%To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.
 
 \begin{verbatim}
-% Understanding multiplication by a diagonal matrix
+% Define M
 M=[1 2 3; 4 5 6; 7 8 9]
+
+% The function diag(vector) creates a square matrix with diagonal 
+%vector and the remaining entries zero.
 D=diag([2 -5 10]) 
-%The function diag(vector) creates a square matrix with diagonal vector and the remaining entries zero. The function diag() can also be used to return the diagonal of a matrix.  For example, diag(M) would return [1;5;9].
-M*D
-D*M
+
+% The function diag() can also be used to return the diagonal of a matrix.  
+diag_M=diag(M)
+
+% Understanding multiplication by a diagonal matrix
+product_MD=M*D
+product_DM=D*M
+
+% Raising a diagonal matrix to a power
+D5=D^5
 \end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJx1zztPwzAUBeA9Uv7DWSqRSlS0EB6qsnn1gmCqSnWb3LSWErv4QYFfz00ilQExWvb5zvEMiltjGTrPdLVZYoXbNe5Q4n6NBzziaZtneTbDy5HRJltH4ywaQ4erD66j8wVqzxQ5gBDeE3lGT9GbT5xNPI4vnaUOYkwBkG0QRfPck7HGHsBWAiJ8s3eLPFPV6G9WuC6xvNkW-G-ClJMFdcFhz0iBRXYCx-Tt2HGpd63sm4YtIN5wsdNTkS4m_9U27EOUfcOoPnXRnDpT09i3_xLgwk1Snp28a1Idd1pVeq5-z0pXaq4n9plMGMA_8WEr4eTO7OXTZaXeyh9wS35E&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
 
 %$$MD = \begin{bmatrix} \answer{2} & \answer{-10} & \answer{30}\\ \answer{8}&\answer{-25}&\answer{60}\\\answer{14}&\answer{-40}&\answer{90}\end{bmatrix} \quad DM= \begin{bmatrix} \answer{2} & \answer{4} & \answer{6}\\ \answer{-20}&\answer{-25}&\answer{-30}\\\answer{70}&\answer{80}&\answer{90}\end{bmatrix}$$
 
-Notice the patterns present in the product matrices.  Each row of $DM$ is the same as its corresponding row of $M$ multiplied by the scalar which is the corresponding diagonal element of $D$.  In the product $MD$, it is the columns of $M$ that have been multiplied by the diagonal elements. These patterns hold in general for any diagonal matrix, and they are fundamental to understanding diagonalization, the process we discuss below.
+Notice the patterns present in the product matrices.  
+\begin{itemize}
+    \item Each row of $DM$ is the same as its corresponding row of $M$ multiplied by the scalar which is the corresponding diagonal element of $D$.
+    \item In the product $MD$, it is the columns of $M$ that have been multiplied by the diagonal elements.
+    \item Raising $D$ to the $5^{th}$ power amounts to raising each diagonal element to the $5^{th}$ power.
+\end{itemize}   
+These patterns hold in general for any diagonal matrix, and they are fundamental to understanding \emph{diagonalization} and its uses.  We discuss diagonalization next.
 \end{exploration}
 
 \begin{definition}\label{def:diagonalizable}
@@ -245,10 +266,10 @@ You can see that the result here is a diagonal matrix where the entries on the m
 \end{explanation}
 \end{example}
 
-It is often easier to work with matrices that are diagonalizable, as the next Exploration demonstrates.  
+%It is often easier to work with matrices that are diagonalizable, as the next Exploration demonstrates.  
 
 \begin{exploration}\label{exp:motivate_diagonalization}
-Let $A=\begin{bmatrix}
+We will continue to use matrices from Example \ref{ex:diagonalizematrix} to illustrate why diagonalizable matrices are easier to work with.  Let $A=\begin{bmatrix}
 2 & 0 & 0 \\
 1 & 4 & -1 \\
 -2 & -4 & 4
@@ -257,19 +278,29 @@ Let $A=\begin{bmatrix}
 0 & 2 & 0 \\
 0 & 0 & 6
 \end{bmatrix}$.  
-Would it be easier to compute $A^5$ or $D^5$ if you had to do so by hand, without a computer?  Certainly $D^5$ is easier, due to the number of zero entries!  Let's use Octave to compute both.
+Would it be easier to compute $A^5$ or $D^5$ if you had to do so by hand, without a computer?  Certainly $D^5$ is easier, due to the number of zero entries!  %Let's use Octave to compute both.
 
-To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.
+%To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.
 
-\begin{verbatim}
-% Powers of a diagonal matrix are easy to compute
-A=[2 0 0; 1 4 -1; -2 -4 4]
-D=diag([2 2 6]) 
-HARD = A^5
-EZ = D^5
-\end{verbatim}
+% \begin{verbatim}
+% % Define matrices A and D 
+% A=[2 0 0; 1 4 -1; -2 -4 4]  
+% D=diag([2 2 6])  
 
-We see that raising a diagonal matrix to a power amounts to simply raising each entry to that same power, whereas computing $A^5$ requires many more calculations.  However, we learned in Example~\ref{ex:diagonalizematrix} that $A$ is similar to $D$, and we can use this to make our computation easier.  This is because
+% % Compare computing times for raising A and D to 
+% % the fifth power.
+% tic
+% HARD = A^5  
+% toc
+
+% tic
+% EZ = D^5
+% toc
+% \end{verbatim}
+
+%\href{https://sagecell.sagemath.org/?z=eJw1jbsKgzAYhfdA3uEsQjtYVLSLOISm0Llji0KIif6DRmJKX7-J0OnAd24ZpLG0GiwqeNJmh4BaR0hwJrp3hQJFixI18rJFXiGvUfeIruxGUtMpRipc-3NCnGW4uWVT3kBH_QRaJwRa4qx1Hl7Rnsj_IjikSpgNLNkwY3Nf4y-cBdKcPcRTooMYmrQdnE4Hh3N_RS6H5qA_pDczlw==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+
+Raising a diagonal matrix to a power amounts to simply raising each entry to that same power, whereas computing $A^5$ requires many more calculations.  However, we learned in Example~\ref{ex:diagonalizematrix} that $A$ is similar to $D$.  We will use this to make our computation easier as follows
 \begin{align*}
     A^5&=\left(PDP^{-1}\right)^5 \\
        &=(PDP^{-1})(PDP^{-1})(PDP^{-1})(PDP^{-1})(PDP^{-1}) \\
@@ -277,18 +308,33 @@ We see that raising a diagonal matrix to a power amounts to simply raising each 
        &=PD(I)D(I)D(I)D(I)DP^{-1} \\
        &=PD^5P^{-1}
 \end{align*}
-With this in mind, it is not as daunting to calculate $A^5$ by hand.  We can compute the product $PD^5$ quite easily since $D^5$ is diagonal, as we learned in Exploration~\ref{init:multiplydiag}.  That leaves just one product of $3 \times 3$ matrices to compute by hand to compute $A^5$.  And the savings in work would certainly be more pronounced for larger matrices or for powers larger that 5.
+With this in mind, it is not as daunting to calculate $A^5$ by hand.  
 
-To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.
+%We can compute the product $PD^5$ quite easily since $D^5$ is diagonal, as we learned in Exploration~\ref{init:multiplydiag}.  That leaves just one product of $3 \times 3$ matrices to compute by hand to find $A^5$.  And t
 
-\begin{verbatim}
-A=[2 0 0; 1 4 -1; -2 -4 4]
-D=diag([2 2 6])
-P=[-2 1 0; 1 0 1; 0 1 -2]
-EZ = D^5
-P*EZ*P^{-1}
-HARD = A^5
-\end{verbatim}
+$$A^5=\begin{bmatrix}
+-2 & 1 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & -2
+\end{bmatrix}\begin{bmatrix}32 & 0 & 0\\0 &32 & 0\\0 & 0 & 7776\end{bmatrix}\begin{bmatrix}
+-1/4 & 1/2 & 1/4 \\
+1/2 & 1 & 1/2 \\
+1/4 & 1/2 & -1/4
+\end{bmatrix}=\begin{bmatrix}32 & 0 & 0\\
+ 1936 & 3904 & -1936\\
+ -3872 & -7744 & 3904\end{bmatrix}$$
+The savings in work would certainly be more pronounced for larger matrices or for powers larger that 5.
+
+%To use Octave, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, copy the code below into the cell, select OCTAVE as the language, and press EVALUATE.
+
+% \begin{verbatim}
+% A=[2 0 0; 1 4 -1; -2 -4 4]
+% D=diag([2 2 6])
+% P=[-2 1 0; 1 0 1; 0 1 -2]
+% EZ = D^5
+% P*EZ*P^{-1}
+% HARD = A^5
+% \end{verbatim}
 \end{exploration}  
 
 In Exploration~\ref{exp:motivate_diagonalization}, because matrix $A$ was diagonalizable, we were able to cut down on computations.  When we chose to work with $D$ and $P$ instead of $A$ we worked with the eigenvalues and eigenvectors of $A$.  Each column of $P$ is an eigenvector of $A$, and so we repeatedly made use of the following theorem (with $m=5$).
@@ -490,8 +536,9 @@ Conversely, if the geometric multiplicity equals the algebraic multiplicity of e
 \end{proof}
 
 \section*{Practice Problems}
-\begin{problem}
+\emph{Problems \ref{prob:ex:diagonalizematrix1}-\ref{prob:ex:diagonalizematrix4}}
 In this exercise you will "fill in the details" of Example \ref{ex:diagonalizematrix}.
+
 \begin{problem}\label{prob:ex:diagonalizematrix1}
 Find the eigenvalues of matrix 
 \begin{equation*}
@@ -502,9 +549,11 @@ A=\begin{bmatrix}
 \end{bmatrix}
 \end{equation*}
 \end{problem} 
+
 \begin{problem}\label{prob:ex:diagonalizematrix2}
 Find a basis for each eigenspace of the matrix $A$.
 \end{problem}
+
 \begin{problem}\label{prob:ex:diagonalizematrix3}
 Compute the inverse of \begin{equation*}
 P=
@@ -515,20 +564,19 @@ P=
 \end{bmatrix}
 \end{equation*}
 \end{problem}
+
 \begin{problem}\label{prob:ex:diagonalizematrix5}
 Compute $D=P^{-1}AP$
 \end{problem}
+
 \begin{problem}\label{prob:ex:diagonalizematrix4}
 Show that computing the inverse of $P$ is not really necessary by comparing the products  $PD$ and $AP$.
 \end{problem}
-  \end{problem}
-
-\begin{problem}
+ 
+\begin{problem}\label{prb:diagonalizable}
 In each case, decide whether the matrix $A$ is diagonalizable. If so, find $P$ such that $P^{-1}AP$ is diagonal.
 
-\begin{problem}\label{prb:diagonalizable}
 \begin{enumerate}
-
 \item $\begin{bmatrix}
 1 & 0 & 0 \\
 1 & 2 & 1 \\
@@ -571,12 +619,11 @@ In each case, decide whether the matrix $A$ is diagonalizable. If so, find $P$ s
 
 %\setcounter{enumi}{3}
 %problem  No, $c_{A}(x) = (x + 1)(x - 4)^{2}$ so $\lambda = 4$ has multiplicity 2. But $\func{dim}(E_{4}) = 1$ so Theorem~\ref{thm:016250} applies.
-\end{problem}
+
 
 \begin{problem}\label{prb:upper_triangular_case}
 Let $A$ denote an $n \times n$ upper triangular matrix.
 \begin{enumerate}
-
 \item If all the main diagonal entries of $A$ are distinct, show that $A$ is diagonalizable.
 
 \item If all the main diagonal entries of $A$ are equal, show that $A$ is diagonalizable only if it is \textit{already} diagonal.

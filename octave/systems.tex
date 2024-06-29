@@ -70,6 +70,26 @@ rank(A_b)
     \end{verbatim}
 
 \href{https://sagecell.sagemath.org/?z=eJxFjsEKwjAMhu-FvsN_Gehh0A49iYfB8CVEpOvSWWSt1Co-vumkmBCS_-cjSYOBnA-EfCOY17xQyDRhMTn5D2xMiZ6PGCYfZuS4UjaSc956JivXw4QJb7I5JoxS9NcRR5w1Wg1V8iAFSnRoO2huu-oo6F_9DYXC7C_VkaLByfMBfsYhOvB6KYrY8LSVgoUJ91V8ASwdNw8=&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.    
+
+\begin{remark}
+    If you start with a matrix $A$ and a separate vector $\vec{b}$, you can create an augmented matrix without re-typing as follows:
+    \begin{verbatim}
+% Define the coefficient matrix A
+A = [1 -1 0 0;
+     2 -2 1 2;
+     0 1 0 1;
+     0 0 2 1];
+
+% Define vector b
+b = [0;4;0;5];
+
+% Create an augmented matrix
+A_b=[A b]
+    \end{verbatim}
+
+\href{https://sagecell.sagemath.org/?z=eJxFjrEKAyEQRHvBf5jmyoNVkkqukOQvjiOoWROL80BMyOdHIZLtHjvMvAlXjikz6pMRDo4xhcS5Yne1pA-sFBYLVoVZgUBGCvTTmDUU9GBCf6s_UouorbEU09h4c6hHgZfC904yJ0PmPEKXwq4yXIZ7PfbmwPefRXO4-WW18NsXtMsrmQ==&lang=octave&interacts=eJyLjgUAARUAuQ==}{Link to code}.
+    
+\end{remark}
 \end{template}
 
 \begin{warning}

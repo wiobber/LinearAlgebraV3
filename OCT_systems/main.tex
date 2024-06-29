@@ -1,0 +1,76 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+
+\title{Octave Problems for Ch 1} \license{CC BY-NC-SA 4.0}
+
+\begin{document}
+
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+\section*{Octave Problems for Chapter 1}
+
+To access Octave cells online, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, select OCTAVE as the language, enter your code, and press EVALUATE.  
+To ''save" or share your code, click on the \emph{Share} button, select \emph{Permalink}, then copy the address directly from the browser window.  You can store this link to access your work later or share this link with others.  You will need to get a new Permalink every time you modify the code.
+
+Refer to Octave Tutorial for Solving Systems of Equations (\ref{sec:oct_systems}).
+
+\begin{problem}
+    Solve each of the following systems of equations using the backslash ($\setminus$) operator, and the \emph{rref} command.  Reconcile the seeming differences.
+
+    \begin{enumerate}
+        \item 
+        \begin{equation}
+\begin{array}{ccccccccc}
+      3x &- &y&+&4z&= &2 \\
+	 &&y&+&z&=&1\\
+     -2x&&&+&3z&=&1
+    \end{array}
+    \end{equation}
+  
+    
+    What is true about this system?
+    
+    \begin{multipleChoice}
+    \choice[correct]{The system is consistent.  Using the backslash operator produces the same result as using the \emph{rref} function.}
+    \choice{The system is inconsistent.  The backslash operator gives the least squares approximation.}
+    \choice{The system is consistent but has infinitely many solutions.  The backslash operator gives one of those solutions.}
+    \end{multipleChoice}
+
+       \item 
+    \begin{equation}
+\begin{array}{ccccccccc}
+      3x &- &y&+&4z&= &2 \\
+	 x&-&y&+&2z&=&4\\
+     -2x&+&y&-&3z&=&-3
+    \end{array}
+    \end{equation}
+
+    What is true about this system?
+    \begin{multipleChoice}
+    \choice{The system is consistent.  Using the backslash operator produces the same result as using the \emph{rref} function.}
+    \choice{The system is inconsistent.  The backslash operator gives the least squares approximation.}
+    \choice[correct]{The system is consistent but has infinitely many solutions.  The backslash operator gives one particular solution.}
+    \end{multipleChoice}
+
+    \item 
+    \begin{equation}
+\begin{array}{ccccccccc}
+      3x &- &y&+&4z&= &2 \\
+	 x&-&y&+&2z&=&1\\
+     -2x&+&y&-&3z&=&1
+    \end{array}
+    \end{equation}
+
+    What is true about this system?
+    \begin{multipleChoice}
+    \choice{The system is consistent.  Using the backslash operator produces the same result as using the \emph{rref} function.}
+    \choice[correct]{The system is inconsistent.  The backslash operator gives the least squares approximation.}
+    \choice{The system is consistent but has infinitely many solutions.  The backslash operator gives one of those solutions.}
+    \end{multipleChoice}
+
+         \end{enumerate}
+\end{problem}
+
+\end{document}

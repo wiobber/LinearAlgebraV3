@@ -1,0 +1,40 @@
+\documentclass{ximera}
+\input{../preamble.tex}
+
+\title{Octave Problems for Ch 2} \license{CC BY-NC-SA 4.0}
+
+\begin{document}
+
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+\section*{Octave Problems for Chapter 2}
+
+To access Octave cells online, go to the \href{https://sagecell.sagemath.org/}{Sage Math Cell Webpage}, select OCTAVE as the language, enter your code, and press EVALUATE.  
+To ''save" or share your code, click on the \emph{Share} button, select \emph{Permalink}, then copy the address directly from the browser window.  You can store this link to access your work later or share this link with others.  You will need to get a new Permalink every time you modify the code.
+
+%Refer to \href{https://ximera.osu.edu/linearalgebrav3/XOctaveTutorial/octave/systems}{Octave Tutorial for Solving Systems of Equations}.
+
+\begin{problem}\label{prob_oct_7}
+    Let $$A=\begin{bmatrix}2 & 6 & -4 & 1 & 1\\
+-1 & 0 & 2 & 2 & 4\\
+-2 & 1 & 3 & -2 & 1\\
+1 & 1 & 0 & 0 & 6\\
+-3 & 4 & 1 & -2 & 0\end{bmatrix}, \quad \vec{b}=\begin{bmatrix}-12\\
+ 6\\
+ -2\\
+ -7\\
+ -8\end{bmatrix}$$
+Solve $A\vec{x}=\vec{b}$ in two different ways.  First, use the reduced row-echelon form of $[A|\vec{b}]$, second multiply both sides of the equation by $A^{-1}$.  Verify that both methods produce the same answer.
+\end{problem}
+
+\begin{problem}\label{prob_oct_6}
+    Write an algorithm that multiplies an $n\times m$ matrix by an $m\times k$ matrix.  
+
+    \begin{hint}
+        You can use \href{https://en.wikipedia.org/wiki/Matrix_multiplication_algorithm}{this Wikipedia page} for reference.
+    \end{hint}    
+\end{problem}
+
+\end{document}

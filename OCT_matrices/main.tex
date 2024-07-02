@@ -29,8 +29,28 @@ To ''save" or share your code, click on the \emph{Share} button, select \emph{Pe
 Solve $A\vec{x}=\vec{b}$ in two different ways.  First, use the reduced row-echelon form of $[A|\vec{b}]$, second multiply both sides of the equation by $A^{-1}$.  Verify that both methods produce the same answer.
 \end{problem}
 
+\begin{problem}\label{prob_oct_mat1}
+Let $A=\begin{bmatrix} 0 & 1\\5 & 3\end{bmatrix}$.  Find $A^{-1}$ in two different ways.  First, use the \emph{inv} function.  Second, find $\text{rref}[A|I]$.
+    \begin{hint}
+        To allow for an $n\times n$ input matrix, you can use \emph{length} to automatically detect matrix size.
+        
+        \begin{verbatim}
+            M = [A eye(length(A))]  
+        \end{verbatim}
+    \end{hint}
+\end{problem}   
+
+\begin{problem}\label{prob_oct_mat2}
+Write a routine that multiplies an $n\times m$ matrix by a vector by computing the linear combination of the columns of the matrix. (See Example \ref{exp:matrixvectormultdef} for reference.)  
+\end{problem}
+
+\begin{problem}\label{prob_oct_mat3}
+Write a routine that multiplies an $n\times m$ matrix by a vector using the dot product definition of matrix-vector multiplication. (See Definition \ref{def:matrixvectormult}.)
+    
+\end{problem}
+
 \begin{problem}\label{prob_oct_6}
-    Write an algorithm that multiplies an $n\times m$ matrix by an $m\times k$ matrix.  
+    Write a routine that multiplies an $n\times m$ matrix by an $m\times k$ matrix.  
 
     \begin{hint}
         You can use \href{https://en.wikipedia.org/wiki/Matrix_multiplication_algorithm}{this Wikipedia page} for reference.
